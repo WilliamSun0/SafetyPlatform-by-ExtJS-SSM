@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10, user-scalable=yes">
 
     <title>SafetyPlatform</title>
+
+
     
     <!-- 引入Font Awesome的css文件 -->
 <link type="text/css" rel="stylesheet" href="css/font-awesome.css">

@@ -10,16 +10,20 @@ Ext.define('SafetyPlatform.view.module.region.Navigate', {
  
 			// glyph : 0xf0d0,
 			title : '导航',
+
+			items:{
+				xtype:'regionmenutree',
+				width : 250,
+				split : true,
+
+
+			},
  
 			initComponent : function() {
  
 				this.callParent();
 			},
 
-			items:{
-				xtype:'regionmenutree',
-				width : 250,
-				split : true
-			}
+
  
 		})

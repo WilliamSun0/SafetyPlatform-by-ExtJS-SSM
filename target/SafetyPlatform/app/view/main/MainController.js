@@ -10,7 +10,7 @@ Ext.define('SafetyPlatform.view.main.MainController', {
 	alias: 'controller.main',
 	
 	//使用Grid
-	requires:['SafetyPlatform.view.module.Module','SafetyPlatform.view.module_risklist.region.Grid'],
+	requires:['SafetyPlatform.view.module.Module','SafetyPlatform.view.module_risklist.GridRiskComList'],//alias:risklisgrdi
 
     onItemSelected: function (sender, record) {
         Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
@@ -72,11 +72,14 @@ Ext.define('SafetyPlatform.view.main.MainController', {
 			reorderable : true
 		});
 
-		
+        //this.getView().down('regionmenutree').reload();
+        //Ext.ComponentQuery.query('regionmenutree').load();
+
 	},
 
     onRiskListMenuClick : function() {
         var maincenter = this.getView().down('maincenter');
+
 
         maincenter.removeAll();
 

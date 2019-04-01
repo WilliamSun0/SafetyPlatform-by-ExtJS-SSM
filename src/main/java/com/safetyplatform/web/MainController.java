@@ -1,5 +1,6 @@
 package com.safetyplatform.web;
 
+import com.alibaba.fastjson.JSONObject;
 import com.safetyplatform.entity.RiskEnterGrade;
 import com.safetyplatform.entity.Test;
 import com.safetyplatform.service.LoginService;
@@ -26,7 +27,7 @@ public class MainController {
             method=RequestMethod.GET
             )
     @ResponseBody
-    public List<Test> test(){
+    public JSONObject test(){
 
         return mainService.getRiskEnterList();/*获取风险评级企业列表*/
     }

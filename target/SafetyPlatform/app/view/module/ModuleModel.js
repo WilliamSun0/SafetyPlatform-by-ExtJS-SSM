@@ -34,14 +34,14 @@ Ext.define('SafetyPlatform.view.module.ModuleModel', {
 									description : '', // 菜单项的描述
 									items : [{
 										text : '新建中心区', // 菜单条的名称
-										module : 'Global', // 对应模块的名称
+										admId : 'Global', // 对应模块的名称
 										icon : '', // 菜单条的图标地址
 										glyph : 0xf0f7,
 									 // 菜单项的描述
 											// 菜单条的图标字体
 											items : [{
 												text : '新建中心区', // 菜单条的名称
-												module : 'Global', // 对应模块的名称
+												admId : 'Global', // 对应模块的名称
 												icon : '', // 菜单条的图标地址
 												glyph : 0xf0f7,
 											 // 菜单项的描述

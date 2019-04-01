@@ -1,10 +1,10 @@
 /**
  * 一个模块的grid上面显示的toolbar,里面放置了各种操作按钮 暂时还没有考虑到权限
  */
-Ext.define('app.view.module.region.GridToolbar', {
+Ext.define('SafetyPlatform.view.module.region.hccgToolBar', {
 	extend : 'Ext.toolbar.Toolbar',
-	alias : 'widget.gridtoolbar',
-	uses : ['app.ux.GridSearchField'],
+	alias : 'widget.hccgtb',
+	//uses : ['app.ux.GridSearchField'],
 	initComponent : function() {
 		this.items = [{
 					text : '显示',
@@ -66,14 +66,6 @@ Ext.define('app.view.module.region.GridToolbar', {
 								text : '打印所有记录',
 								glyph : 0xf02f
 							}]
-				}, '-', '筛选', {
-					width : 60,
-					xtype : 'gridsearchfield',
-					store : Ext.create('Ext.data.Store', {
-								proxy : {
-									type : 'rest'
-								}
-							})
 				}];
 		this.callParent();
 	}

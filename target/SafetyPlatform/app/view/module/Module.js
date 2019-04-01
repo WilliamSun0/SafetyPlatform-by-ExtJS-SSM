@@ -6,7 +6,7 @@ Ext.define('SafetyPlatform.view.module.Module', {
  
 	alias : 'widget.modulepanel',
  
-	requires : ['SafetyPlatform.view.module.ModuleController','SafetyPlatform.view.module.ModuleModel'],
+	requires : ['SafetyPlatform.view.module.ModuleController','SafetyPlatform.view.module.ModuleModel','SafetyPlatform.view.main.region.Center'],
  
 	uses : ['SafetyPlatform.view.module.region.Navigate'],
  
@@ -24,10 +24,15 @@ Ext.define('SafetyPlatform.view.module.Module', {
 					xtype : 'navigate', // 导航区域
 					region : 'west',
 					width : 250,
-					collapsible : true,
+					//collapsible : true,
 					split : true
-				}
-		]
+					},
+					{
+						region : 'center', // 中间面版
+						xtype : 'maincenter',
+						id:'x'
+					}];
+
  
 		this.callParent();
 	}
