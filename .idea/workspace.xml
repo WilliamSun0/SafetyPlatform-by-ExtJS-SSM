@@ -7,49 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f85b04f-1d92-4a10-9eeb-14009bf8c78f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/app/controller/riskcomlist/RiskComListController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/app/store/hiddencheckcorrect/HiddenCheckCorrectTreeStore.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/app/view/module/region/HiddenCheckCorrectGrid.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/app/view/module_risklist/GridRiskComList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/safetyplatform/service/MainService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/service/MainService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/safetyplatform/service/impl/MainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/service/impl/MainServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/safetyplatform/web/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/web/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/app/model/riskcomlist/RiskComListModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/model/riskcomlist/RiskComListModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/app/view/main/MainController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/view/main/MainController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/app/view/module/Module.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/view/module/Module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/app/view/module/ModuleModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/view/module/ModuleModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/app/view/module/region/Grid.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/app/view/module/region/GridToolBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/view/module/region/hccgToolBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/app/view/module/region/Navigate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/view/module/region/Navigate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/app/view/module/region/RegionMenuTree.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/view/module/region/RegionMenuTree.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/app/view/module_risklist/RiskComList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/app/view/module_risklist/RiskComListController.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/app/view/module_risklist/RiskComListModel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/app/view/module_risklist/region/Grid.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/app/view/module_risklist/region/GridToolBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/view/module_risklist/GridToolBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/WEB-INF/classes/com/safetyplatform/service/MainService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/WEB-INF/classes/com/safetyplatform/service/MainService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/WEB-INF/classes/com/safetyplatform/service/impl/MainServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/WEB-INF/classes/com/safetyplatform/service/impl/MainServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/WEB-INF/classes/com/safetyplatform/web/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/WEB-INF/classes/com/safetyplatform/web/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/app/model/riskcomlist/RiskComListModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/app/model/riskcomlist/RiskComListModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/app/view/main/MainController.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/app/view/main/MainController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/app/view/module/Module.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/app/view/module/Module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/app/view/module/ModuleModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/app/view/module/ModuleModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/app/view/module/region/Grid.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/app/view/module/region/GridToolBar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/app/view/module/region/Navigate.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/app/view/module/region/Navigate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/app/view/module/region/RegionMenuTree.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/app/view/module/region/RegionMenuTree.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/app/view/module_risklist/RiskComList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/app/view/module_risklist/RiskComListController.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/app/view/module_risklist/RiskComListModel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/app/view/module_risklist/region/Grid.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/app/view/module_risklist/region/GridToolBar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/safetyplatform/service/MainService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/safetyplatform/service/MainService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/safetyplatform/service/impl/MainServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/safetyplatform/service/impl/MainServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/safetyplatform/web/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/safetyplatform/web/MainController.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -713,12 +671,12 @@
       <workItem from="1553925284014" duration="13065000" />
       <workItem from="1553997461329" duration="8412000" />
       <workItem from="1554007391037" duration="13099000" />
-      <workItem from="1554083618143" duration="2327000" />
+      <workItem from="1554083618143" duration="2954000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101592000" />
+    <option name="totallyTimeSpent" value="102219000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
