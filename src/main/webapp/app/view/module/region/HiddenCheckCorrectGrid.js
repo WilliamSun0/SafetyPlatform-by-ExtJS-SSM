@@ -6,10 +6,11 @@ Ext.define('SafetyPlatform.view.module.region.HiddenCheckCorrectGrid', {
     extend : 'Ext.grid.Panel',
     alias : 'widget.hccg',
     uses : ['SafetyPlatform.view.module.region.hccgToolBar'],
+    //uses代表可能使用某类，requires代表如果是类的固有方法必须使用
 
-    initComponent:function(){
-        Ext.apply(this, {
-
+    // initComponent:function(){
+    //     Ext.apply(this, {
+    //
             dockedItems: [{
                 xtype: 'hccgtb', // 按钮toolbar
                 dock: 'top'
@@ -37,8 +38,8 @@ Ext.define('SafetyPlatform.view.module.region.HiddenCheckCorrectGrid', {
                     tf_budget: 453092
                 }]
             }),
-            // initComponent : function() {
-            //    console.log(this.admId);
-            // }
-        })}
+    //         // initComponent : function() {
+    //         //    console.log(this.admId);
+    //         // }
+    //     })}
 })

@@ -6,6 +6,8 @@ Ext.define('SafetyPlatform.view.module.region.Navigate', {
 			extend : 'Ext.panel.Panel',
 			alias : 'widget.navigate',
 
+			requires:['SafetyPlatform.view.module.region.RegionMenuTree'],
+
 			uses: ['SafetyPlatform.view.module.region.RegionMenuTree'],
  
 			// glyph : 0xf0d0,
@@ -14,9 +16,6 @@ Ext.define('SafetyPlatform.view.module.region.Navigate', {
 			items:{
 				xtype:'regionmenutree',
 				width : 250,
-				split : true,
-
-
 			},
  
 			initComponent : function() {
@@ -24,6 +23,4 @@ Ext.define('SafetyPlatform.view.module.region.Navigate', {
 				this.callParent();
 			},
 
-
- 
 		})

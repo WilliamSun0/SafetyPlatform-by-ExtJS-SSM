@@ -1,10 +1,12 @@
 package com.safetyplatform.web;
 
 import com.alibaba.fastjson.JSONObject;
+import com.safetyplatform.entity.RegionTree;
 import com.safetyplatform.entity.RiskEnterGrade;
 import com.safetyplatform.entity.Test;
 import com.safetyplatform.service.LoginService;
 import com.safetyplatform.service.MainService;
+import com.safetyplatform.service.RegionTreeService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +14,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
@@ -23,6 +26,9 @@ public class MainController {
     @Autowired
     private MainService mainService;
 
+    @Autowired
+    private RegionTreeService regionTreeService;
+
     @RequestMapping(value="/test/test",
             method=RequestMethod.GET
             )
@@ -30,5 +36,14 @@ public class MainController {
     public JSONObject test(){
 
         return mainService.getRiskEnterList();/*获取风险评级企业列表*/
+    }
+
+    @RequestMapping(value="/test/testtree",
+            method=RequestMethod.GET
+    )
+    @ResponseBody
+    public List<RegionTree> testtree(){
+
+        return regionTreeService.getAllRegionTrees();/*获取风险评级企业列表*/
     }
 }
