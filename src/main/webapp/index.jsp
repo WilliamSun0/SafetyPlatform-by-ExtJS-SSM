@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE HTML>
 <html manifest="">
 <head>
@@ -8,6 +9,7 @@
     <title>SafetyPlatform</title>
 
 
+    <script src="./jquery-3.2.1.js"></script>
     
     <!-- 引入Font Awesome的css文件 -->
 <link type="text/css" rel="stylesheet" href="css/font-awesome.css">
@@ -51,9 +53,13 @@
     </script>
     -->
 
+    <%--<c:set var="ctxpath" value="${pageContext.request.contextPath}"/>--%>
     <!-- The line below must be kept intact for Sencha Cmd to build your application -->
     <script id="microloader" data-app="c6d53545-e0f0-44af-a440-467a4b1d5556" type="text/javascript" src="bootstrap.js"></script>
 
 </head>
-<body></body>
+<body>
+
+<input id="ctxpath" type="hidden" value="${pageContext.request.contextPath}" />
+</body>
 </html>

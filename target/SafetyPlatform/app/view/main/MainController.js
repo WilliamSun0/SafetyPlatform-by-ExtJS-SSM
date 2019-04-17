@@ -60,7 +60,7 @@ Ext.define('SafetyPlatform.view.main.MainController', {
 	
 	// 选择了主菜单上的菜单后执行
     onRegionChartClick : function() {
-		var maincenter = this.getView().down('maincenter');
+		var maincenter = this.getView().down('panel');
 
 		maincenter.removeAll();
 
@@ -78,8 +78,7 @@ Ext.define('SafetyPlatform.view.main.MainController', {
 	},
 
     onRiskListMenuClick : function() {
-        var maincenter = this.getView().down('maincenter');
-
+        var maincenter = this.getView().down('panel');
 
         maincenter.removeAll();
 
@@ -91,6 +90,7 @@ Ext.define('SafetyPlatform.view.main.MainController', {
             reorderable : true
         });
 
+    },
 
-    }
+
 });

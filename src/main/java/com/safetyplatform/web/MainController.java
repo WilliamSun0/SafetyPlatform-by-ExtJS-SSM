@@ -29,11 +29,11 @@ public class MainController {
     @Autowired
     private RegionTreeService regionTreeService;
 
-    @RequestMapping(value="/test/test",
+    @RequestMapping(value="/getRiskEnterList",
             method=RequestMethod.GET
             )
     @ResponseBody
-    public JSONObject test(){
+    public JSONObject getRiskEnterList(){
 
         return mainService.getRiskEnterList();/*获取风险评级企业列表*/
     }
@@ -45,5 +45,14 @@ public class MainController {
     public List<RegionTree> testtree(){
 
         return regionTreeService.getAllRegionTrees();/*获取风险评级企业列表*/
+    }
+
+    @RequestMapping(value="/HiddenRiskCheckCorrect",
+            method=RequestMethod.GET
+    )
+    @ResponseBody
+    public JSONObject hiddenRiskCheckCorrect(@RequestParam String enterId,@RequestParam int start,@RequestParam int limit,@RequestParam(required = false,defaultValue="other") String businessType){
+
+        return mainService.getHiddenRiskCheckCorrect(enterId,start,limit,businessType);/*获取风险评级企业列表*/
     }
 }

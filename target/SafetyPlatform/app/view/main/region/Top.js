@@ -12,7 +12,10 @@ Ext.define('SafetyPlatform.view.main.region.Top', {
 			defaults : {
 				xtype : 'buttontransparent'//设置所有控件的默认按钮是透明
 			},
- 
+	//登录时根据具体的权限加载相应的模块并传入参数
+
+    // initComponent : function() {
+				//var thirdparty_type = 1;
 			items : [{
 						xtype : 'image',
 						bind : { // 数据绑定到MainModel中data的ystem.iconUrl
@@ -25,12 +28,7 @@ Ext.define('SafetyPlatform.view.main.region.Top', {
 							text : '{system.name}' // text值绑定到system.name
 						},
 						style : 'font-size : 20px; color : blue;'
-					}, {
-						xtype : 'label',
-						bind : {
-							text : '{system.version}'
-						}
-					},' ', {
+					}, ' ', {
 						text : '辖区企业数据',
 						handler:'onRegionChartClick',
 						glyph: 0xf080
@@ -65,4 +63,6 @@ Ext.define('SafetyPlatform.view.main.region.Top', {
 					
 					]
  
-		});
+		// }
+
+})

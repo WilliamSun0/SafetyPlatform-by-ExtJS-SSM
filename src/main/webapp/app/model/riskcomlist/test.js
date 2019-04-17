@@ -7,5 +7,6 @@ Ext.define("SafetyPlatform.model.riskcomlist.test", {
         { name: 'regionUrl'},
         { name: 'fatherId' },
         { name: 'cls' },
-    ]
+    ],
+
 });

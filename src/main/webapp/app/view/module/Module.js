@@ -24,13 +24,14 @@ Ext.define('SafetyPlatform.view.module.Module', {
 					xtype : 'regionmenutree', // 导航区域
 					region : 'west',
 					width : 250,
+
 					//collapsible : true,
-					split : true
+					//split : true
 					},
 					{
 						region : 'center', // 中间面版
-						xtype : 'maincenter',
-						id:'x'
+						xtype : 'hcctab',
+						id:'hcctab'
 					}];
 
  

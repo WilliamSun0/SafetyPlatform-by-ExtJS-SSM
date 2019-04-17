@@ -11,6 +11,7 @@ public class RegionTree {
     private String regionUrl;//节点点击的请求路径
     private String cls;//节点的图标，folder还是file
     private String fatherId;//父级菜单
+    private int type;//区划等级
     private List<RegionTree> children;//子菜单
     //getter...setter
 
@@ -61,6 +62,14 @@ public class RegionTree {
 
     public void setFatherId(String fatherId) {
         this.fatherId = fatherId;
+    }
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
     }
 
     public List<RegionTree> getChildren() {

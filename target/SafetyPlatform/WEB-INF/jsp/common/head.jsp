@@ -12,8 +12,8 @@
 描述：引入主题样式文件
 -->
 
-<script src="../../../resource/build/ext-all.js" type="text/javascript" charset="utf-8"></script>
-<link rel="stylesheet" type="text/css" href="../../../resource/build/classic/theme-neptune/resources/theme-neptune-all.css"/>
+<script src="../../../ext/build/ext-all-debug.js" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" type="text/css" href="../../../ext/classic/theme-neptune/"/>
 
 
 <!--

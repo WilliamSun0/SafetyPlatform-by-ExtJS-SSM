@@ -7,66 +7,16 @@ Ext.define('SafetyPlatform.view.module.region.hccgToolBar', {
 	//uses : ['app.ux.GridSearchField'],
 	initComponent : function() {
 		this.items = [{
-					text : '显示',
-					glyph : 0xf022
-				}, {
-					text : '新增',
-					xtype : 'splitbutton',
-					glyph : 0xf016,
-					menu : [{
-								text : '复制新增',
-								tooltip : '新增时先将当前记录添入到新记录中',
-								glyph : 0xf0c5
-							}, '-', {
-								text : '上传Excel表单条新增',
-								tooltip : '根据指定的excel表添好数据后，上传新增一条记录',
-								glyph : 0xf062
-							}, {
-								text : '上传Excel表批量新增',
-								tooltip : '根据下载的Excel表中的要求添加数据后，上传批量新增数据',
-								glyph : 0xf062
-							}]
-				}, {
-					text : '修改',
-					glyph : 0xf044
-				}, {
-					text : '删除',
-					glyph : 0xf014
-				}, '-', {
-					glyph : 0xf0c6,
-					xtype : 'splitbutton',
-					menu : [{
-								text : '新增附件',
-								icon : 'images/button/additionadd.png',
-								glyph : 0xf093
-							}, '-', {
-								text : '预览所有附件',
-								glyph : 0xf03e
-							}, '-', {
-								text : '下载所有附件',
-								glyph : 0xf019
-							}]
-				}, {
-					xtype : 'splitbutton',
-					glyph : 0xf0ce,
-					menu : [{
-								text : '列表导出至excel',
-								glyph : 0xf0ce
-							}, '-', {
-								text : '选中记录导出至excel',
-								glyph : 0xf0ce
-							}]
-				}, {
-					xtype : 'splitbutton',
-					glyph : 0xf02f,
-					menu : [{
-								text : '打印当前页',
-								glyph : 0xf02f
-							}, {
-								text : '打印所有记录',
-								glyph : 0xf02f
-							}]
-				}];
+            xtype : "pagingtoolbar",
+            pageSize : 12,
+            store:'hckgs_id',
+            displayMsg: '显示 {0} - {1} 条，共计 {2} 条',
+            emptyMsg: "没有数据",
+            beforePageText: "当前页",
+            afterPageText: "共{0}页",
+            displayInfo: true
+
+		}];
 		this.callParent();
 	}
 })

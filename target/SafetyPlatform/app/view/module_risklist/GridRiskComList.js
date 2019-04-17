@@ -22,22 +22,24 @@ Ext.define('SafetyPlatform.view.module_risklist.GridRiskComList', {
 
     columnLines: true,
     renderTo: Ext.getBody(),
-    // selModel: {
-    //     injectCheckbox: 0,
-    //     mode: "SIMPLE",     //"SINGLE"/"SIMPLE"/"MULTI"
-    //     checkOnly: true     //只能通过checkbox选择
-    // },
-    // selType: "checkboxmodel",
+    selModel: {
+        injectCheckbox: 0,
+        mode: "SIMPLE",     //"SINGLE"/"SIMPLE"/"MULTI"
+        checkOnly: true     //只能通过checkbox选择
+    },
+    selType: "checkboxmodel",
 
     initComponent:function(){
 
         var me = this;
+        //me.store = Ext.getStore('Ingram14');
         me.columns = [
             {xtype: 'rownumberer', text: '序号', width:40},
             {text:'企业名称', dataIndex:'enterName',flex:1},
             {text:'所属行业', dataIndex:'enterIndustry',flex:1},
             {text:'社区', dataIndex:'enterCommunity',flex:1},
             {text:'风险级别', dataIndex:'riskLevel',flex:1},
+            {text:'隐患数目', dataIndex:'riskNum',flex:1},
             {text:'重大隐患数目', dataIndex:'potentialRiskNum',flex:1},
             {text:'重大危险源', dataIndex:'fatalDangerSource',flex:1},
             {text:'涉危企业', dataIndex:'highRiskEnterprise',flex:1},
@@ -52,7 +54,12 @@ Ext.define('SafetyPlatform.view.module_risklist.GridRiskComList', {
 
         me.tbar = {
             xtype : "pagingtoolbar",
-            pageSize : 20,
+            pageSize : 30,
+            store:me.store,
+            displayMsg: '显示 {0} - {1} 条，共计 {2} 条',
+            emptyMsg: "没有数据",
+            beforePageText: "当前页",
+            afterPageText: "共{0}页",
             displayInfo: true
         };
 

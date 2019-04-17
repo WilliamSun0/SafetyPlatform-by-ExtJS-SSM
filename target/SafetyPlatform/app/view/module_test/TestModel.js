@@ -6,8 +6,5 @@ Ext.define('SafetyPlatform.view.module_test.TestModel', {
         { name: "emp_id" },
         { name: "name"}
     ],
-    proxy : {
-        type:'ajax',
-        url:'/SafetyPlatform/test/test'
-    }
+
 })

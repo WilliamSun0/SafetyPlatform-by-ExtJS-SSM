@@ -8,13 +8,13 @@ public class RiskEnterGrade {
 
     private String enterIndustry;//所属行业
 
-    private int enterCommunity;//社区
+    private String enterCommunity;//社区
 
-    private int riskLevel;
+    //private int riskLevel;
 
-    private int potentialRiskNum;//潜在风险数
+    private int riskNum;//隐患数
 
-    private int majorRiskNum;//重大隐患数
+    //private int majorRiskNum;//重大隐患数
 
     private int fatalDangerSource;//重大危险源
 
@@ -22,15 +22,16 @@ public class RiskEnterGrade {
 
     private int dangerChemicalTech;
 
-    private int isExecute;//已经执行？
+    //private int isExecute;//已经执行？
 
     private int restrictedSpace;
 
-    private  int dustExplosion;
+    private int dustExplosion;
 
-    private int evaluationNum;
+//    private int evaluationNum;
+//
+//    private Date lastEvaluationTime;//最后评估时间
 
-    private Date lastEvaluationTime;//最后评估时间
 
     public String getEnterName() {
         return enterName;
@@ -48,36 +49,20 @@ public class RiskEnterGrade {
         this.enterIndustry = enterIndustry;
     }
 
-    public int getEnterCommunity() {
+    public String getEnterCommunity() {
         return enterCommunity;
     }
 
-    public void setEnterCommunity(int enterCommunity) {
+    public void setEnterCommunity(String enterCommunity) {
         this.enterCommunity = enterCommunity;
     }
 
-    public int getRiskLevel() {
-        return riskLevel;
+    public int getRiskNum() {
+        return riskNum;
     }
 
-    public void setRiskLevel(int riskLevel) {
-        this.riskLevel = riskLevel;
-    }
-
-    public int getPotentialRiskNum() {
-        return potentialRiskNum;
-    }
-
-    public void setPotentialRiskNum(int potentialRiskNum) {
-        this.potentialRiskNum = potentialRiskNum;
-    }
-
-    public int getMajorRiskNum() {
-        return majorRiskNum;
-    }
-
-    public void setMajorRiskNum(int majorRiskNum) {
-        this.majorRiskNum = majorRiskNum;
+    public void setRiskNum(int riskNum) {
+        this.riskNum = riskNum;
     }
 
     public int getFatalDangerSource() {
@@ -104,14 +89,6 @@ public class RiskEnterGrade {
         this.dangerChemicalTech = dangerChemicalTech;
     }
 
-    public int getIsExecute() {
-        return isExecute;
-    }
-
-    public void setIsExecute(int isExecute) {
-        this.isExecute = isExecute;
-    }
-
     public int getRestrictedSpace() {
         return restrictedSpace;
     }
@@ -126,21 +103,5 @@ public class RiskEnterGrade {
 
     public void setDustExplosion(int dustExplosion) {
         this.dustExplosion = dustExplosion;
-    }
-
-    public int getEvaluationNum() {
-        return evaluationNum;
-    }
-
-    public void setEvaluationNum(int evaluationNum) {
-        this.evaluationNum = evaluationNum;
-    }
-
-    public Date getLastEvaluationTime() {
-        return lastEvaluationTime;
-    }
-
-    public void setLastEvaluationTime(Date lastEvaluationTime) {
-        this.lastEvaluationTime = lastEvaluationTime;
     }
 }

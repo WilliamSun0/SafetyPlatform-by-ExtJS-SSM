@@ -8,7 +8,7 @@ Ext.define('SafetyPlatform.store.riskcomlist.RiskComListStore', {
 
     proxy: {
         type: 'ajax',
-        url: '/SafetyPlatform/test/test',
+        url: '/SafetyPlatform/getRiskEnterList',
         reader: {
             type: 'json',
             rootProperty: 'data'

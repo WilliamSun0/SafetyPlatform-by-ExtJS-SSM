@@ -9,4 +9,8 @@ import java.util.List;
 public interface MainService {
 
     JSONObject getRiskEnterList();
+
+    JSONObject test(String regionId);
+
+    JSONObject getHiddenRiskCheckCorrect(String enterId,int start,int limit,String businessType);
 }

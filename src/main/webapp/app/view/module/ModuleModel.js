@@ -10,6 +10,10 @@ Ext.define('SafetyPlatform.view.module.ModuleModel', {
 			// 所有数据库里的字段，我都以tf_开头，只是为了表示这是从后台读取过来的
  
 			data : {
+                hcctab_title:'隐患排查整改',
+                eftab_title:'企业信息',
+
+                nowRegion:1,
  
 				tf_moduleId : '1010', // 模块ID号：一个数字的ID号，可以根据此ID号的顺序将相同分组的模块放在一块。
 				tf_ModuleGroup : '工程管理',// 模块分组：模块分到哪个组里，比如说业务模块1、业务模块2、系统设置、系统管理等。
@@ -56,6 +60,7 @@ Ext.define('SafetyPlatform.view.module.ModuleModel', {
 		 
 						],
 										// 系统菜单的定义，这个菜单可以是从后台通过ajax传过来的
+
 			}
  
 		})

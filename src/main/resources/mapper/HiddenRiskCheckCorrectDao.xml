@@ -1,0 +1,60 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.safetyplatform.dao.HiddenRiskCheckCorrectDao">
+    <!--目的:为dao接口方法提供sql语句配置
+    即针对dao接口中的方法编写我们的sql语句-->
+
+
+    <!--<update id="reduceNumber">-->
+    <!--UPDATE seckill-->
+    <!--SET numbers = numbers-1-->
+    <!--WHERE seckill_id=#{seckillId}-->
+    <!--AND start_time <![CDATA[ <= ]]> #{killTime}-->
+    <!--AND end_time >= #{killTime}-->
+    <!--AND numbers > 0;-->
+    <!--</update>-->
+
+    <select id="getTotalNumHRCCL" resultType="int">
+    select count(*) from enter_hidden_relation  right join zyjk on zyjk.risk_id = enter_hidden_relation.risk_id and enter_hidden_relation.enter_id = #{enterId}
+        where zyjk.main_object in (
+          select distinct object_name from risk_objet_info roi,businesstype_object_relation bor,business_type_info bti,enter_business_relation ebr
+          where roi.object_id = bor.object_id and bor.business_id = bti.type_id and bti.type_id = ebr.type_id and ebr.enter_id = #{enterId})
+
+
+    </select>
+
+    <select id="getHiddenRiskCheckCorrectList" resultType="HiddenRiskCheckCorrect">
+        select * from enter_hidden_relation  right join zyjk on zyjk.risk_id = enter_hidden_relation.risk_id and enter_hidden_relation.enter_id = #{enterId}
+        where zyjk.main_object in (
+          select distinct object_name from risk_objet_info roi,businesstype_object_relation bor,business_type_info bti,enter_business_relation ebr
+          where roi.object_id = bor.object_id and bor.business_id = bti.type_id and bti.type_id = ebr.type_id and ebr.enter_id = #{enterId})
+        <if test="businessType != 'other'">
+            and zyjk.main_object like CONCAT('%',#{businessType})
+        </if>
+        limit #{start},#{limit};
+    </select>
+
+    <update id="updateHiddenRiskCheck">
+        UPDATE enter_hidden_relation
+        SET check_img = #{filePath}
+        WHERE UID = #{reportId}
+    </update>
+
+    <insert id="insertHiddenRiskCheck">
+        <!--当出现主键冲突时(即重复秒杀时)，会报错;不想让程序报错，加入ignore-->
+        INSERT ignore INTO enter_hidden_relation(enter_id,risk_id,check_img)
+        VALUES (#{enterId},#{riskId},#{filePath})
+    </insert>
+
+
+
+    <resultMap id="RegionTreeTemp" type="RegionTree">
+
+        <result column="leaf" property="leaf" jdbcType="TINYINT" javaType="Boolean" />
+
+    </resultMap>
+
+
+
+</mapper>

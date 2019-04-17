@@ -34,9 +34,37 @@
         WHERE father_id is NULL
     </select>
 
+    <select id="getEnterListByZoneId" resultMap="EnterBaseInfoTemp">
+
+        SELECT enter_id,name
+        FROM enterprise_base_info ebi
+        WHERE ebi.gov_id = #{noteId}
+
+    </select>
+
+    <select id="getEnterBusinessByEnterId" resultMap="EnterBusinessTemp">
+        SELECT bti.type_name,bti.type_id
+        FROM business_type_info bti,enter_business_relation ebr
+        WHERE bti.type_id = ebr.type_id and ebr.enter_id = #{noteId}
+    </select>
+
     <resultMap id="RegionTreeTemp" type="RegionTree">
 
         <result column="leaf" property="leaf" jdbcType="TINYINT" javaType="Boolean" />
+
+    </resultMap>
+
+    <resultMap id="EnterBaseInfoTemp" type="EnterBaseInfo">
+
+        <result column="enter_id" property="enterId" />
+        <result column="name" property="name" />
+
+    </resultMap>
+
+    <resultMap id="EnterBusinessTemp" type="EnterBusiness">
+
+        <result column="bti.type_name" property="typeName" />
+        <result column="bti.type_id" property="typeId" />
 
     </resultMap>
 
