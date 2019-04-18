@@ -11,6 +11,8 @@ Ext.define('SafetyPlatform.view.main.Main', {
  
 	xtype : 'app-main',
 
+    plugins: 'viewport',
+
 	requires : ['SafetyPlatform.view.main.MainController', 'SafetyPlatform.view.main.MainModel'],
  
 	uses : ['SafetyPlatform.view.main.region.Top','SafetyPlatform.view.main.region.Center'],

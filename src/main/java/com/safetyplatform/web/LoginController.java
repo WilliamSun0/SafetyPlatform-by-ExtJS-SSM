@@ -17,10 +17,10 @@ public class LoginController {
 
 //    @Autowired
 //    private LoginService loginService;
-    @RequestMapping(value = "/",method = RequestMethod.GET)
-    public String login(Model model){
-
-
-        return "login/login";
-    }
+//    @RequestMapping(value = "/",method = RequestMethod.POST)
+//    public String login(){
+//
+//
+//
+//    }
 }

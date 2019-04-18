@@ -15,12 +15,43 @@ Ext.define('SafetyPlatform.Application', {
         }
     },
 
-    stores: [
-        // TODO: add global / shared stores here
+    // stores: [
+    //     // TODO: add global / shared stores here
+    // ],
+    //
+    // launch: function () {
+    //     // TODO - Launch the application
+    // },
+    //
+    // onAppUpdate: function () {
+    //     Ext.Msg.confirm('Application Update', 'This application has an update, reload?',
+    //         function (choice) {
+    //             if (choice === 'yes') {
+    //                 window.location.reload();
+    //             }
+    //         }
+    //     );
+    // }
+
+    views: [
+        'SafetyPlatform.view.module_login.Login',
+        'SafetyPlatform.controller.login.LoginController'
     ],
 
     launch: function () {
         // TODO - Launch the application
+
+        var loggedIn;
+
+        // Check to see the current value of the localStorage key
+        loggedIn = localStorage.getItem("TutorialLoggedIn");
+
+        // This ternary operator determines the value of the TutorialLoggedIn key.
+        // If TutorialLoggedIn isn't true, we display the login window,
+        // otherwise, we display the main view
+        Ext.create({
+            xtype: loggedIn ? 'app-main' : 'login'
+        });
     },
 
     onAppUpdate: function () {
