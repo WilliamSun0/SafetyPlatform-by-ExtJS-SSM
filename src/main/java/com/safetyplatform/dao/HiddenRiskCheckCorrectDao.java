@@ -17,14 +17,15 @@ public interface HiddenRiskCheckCorrectDao {
      * @return
      */
 
+
     List<HiddenRiskCheckCorrect> getHiddenRiskCheckCorrectList(@Param("enterId") String enterId,@Param("start") int start,@Param("limit") int limit,@Param("businessType") String businessType);
 
-    int getTotalNumHRCCL(@Param("enterId") String enterId);
+    int getTotalNumHRCCL(@Param("enterId") String enterId,@Param("businessType") String businessType);
 
     int insertHiddenRiskCheck(@Param("enterId")int enterId,@Param("riskId")int riskId,@Param("filePath")String mypath);
     //int insertHiddenRiskCorrect();
 
-    int updateHiddenRiskCheck(@Param("reportId")int reportId,@Param("enterId")int enterId,@Param("riskId")int riskId,@Param("filePath")String mypath);
+    int updateHiddenRiskCheck(@Param("reportId") int reportId,@Param("enterId")int enterId,@Param("riskId")int riskId,@Param("filePath")String mypath);
     //int insertHiddenRiskCorrect();
 
 }

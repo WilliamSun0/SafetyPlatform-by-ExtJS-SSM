@@ -34,9 +34,9 @@
         WHERE father_id is NULL
     </select>
 
-    <select id="getEnterListByZoneId" resultMap="EnterBaseInfoTemp">
+    <select id="getEnterListByZoneId" resultType="EnterBaseInfo">
 
-        SELECT enter_id,name
+        SELECT enter_id,enter_name
         FROM enterprise_base_info ebi
         WHERE ebi.gov_id = #{noteId}
 
@@ -54,12 +54,7 @@
 
     </resultMap>
 
-    <resultMap id="EnterBaseInfoTemp" type="EnterBaseInfo">
 
-        <result column="enter_id" property="enterId" />
-        <result column="name" property="name" />
-
-    </resultMap>
 
     <resultMap id="EnterBusinessTemp" type="EnterBusiness">
 

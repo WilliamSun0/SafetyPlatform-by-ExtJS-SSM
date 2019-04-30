@@ -17,20 +17,17 @@
 
     <select id="getTotalNumHRCCL" resultType="int">
     select count(*) from enter_hidden_relation  right join zyjk on zyjk.risk_id = enter_hidden_relation.risk_id and enter_hidden_relation.enter_id = #{enterId}
-        where zyjk.main_object in (
-          select distinct object_name from risk_objet_info roi,businesstype_object_relation bor,business_type_info bti,enter_business_relation ebr
-          where roi.object_id = bor.object_id and bor.business_id = bti.type_id and bti.type_id = ebr.type_id and ebr.enter_id = #{enterId})
-
+        <if test="businessType != 'other'">
+            where  zyjk.main_object like CONCAT('%',#{businessType})
+        </if>
 
     </select>
 
     <select id="getHiddenRiskCheckCorrectList" resultType="HiddenRiskCheckCorrect">
         select * from enter_hidden_relation  right join zyjk on zyjk.risk_id = enter_hidden_relation.risk_id and enter_hidden_relation.enter_id = #{enterId}
-        where zyjk.main_object in (
-          select distinct object_name from risk_objet_info roi,businesstype_object_relation bor,business_type_info bti,enter_business_relation ebr
-          where roi.object_id = bor.object_id and bor.business_id = bti.type_id and bti.type_id = ebr.type_id and ebr.enter_id = #{enterId})
+
         <if test="businessType != 'other'">
-            and zyjk.main_object like CONCAT('%',#{businessType})
+            where  zyjk.main_object like CONCAT('%',#{businessType})
         </if>
         limit #{start},#{limit};
     </select>

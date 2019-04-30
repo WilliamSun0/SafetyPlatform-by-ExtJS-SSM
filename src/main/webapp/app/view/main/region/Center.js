@@ -4,7 +4,7 @@
 Ext.define('SafetyPlatform.view.main.region.Center', {
 	extend : 'Ext.TabPanel',
  
-	alias : 'widget.hcctab',
+	//alias : 'widget.hcctab',
 
 	layout:'fit',
 

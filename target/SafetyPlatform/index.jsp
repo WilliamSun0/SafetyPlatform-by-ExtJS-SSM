@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page pageEncoding="UTF-8" %>
 <!DOCTYPE HTML>
 <html manifest="">
 <head>
@@ -10,6 +11,8 @@
 
 
     <script src="./jquery-3.2.1.js"></script>
+    <script src="app/view/module/enterinfo/scrthrt.js"></script>
+    <script src="app/view/module/enterinfo/enterprise_graph.js"></script>
     
     <!-- 引入Font Awesome的css文件 -->
 <link type="text/css" rel="stylesheet" href="css/font-awesome.css">

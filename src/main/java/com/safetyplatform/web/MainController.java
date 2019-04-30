@@ -39,8 +39,7 @@ public class MainController {
     }
 
     @RequestMapping(value="/test/testtree",
-            method=RequestMethod.GET
-    )
+            method=RequestMethod.GET,produces = {"application/json;charset=UTF-8"})
     @ResponseBody
     public List<RegionTree> testtree(){
 

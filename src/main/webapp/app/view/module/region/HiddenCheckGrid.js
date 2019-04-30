@@ -1,6 +1,7 @@
 /**
  * 模块数据的主显示区域，继承自Grid
  */
+var pmfile,xffile;
 var ctxpath = $(".ctxpath");
 function showFile(file)
 {
@@ -47,48 +48,48 @@ function showFile(file)
 
 }
 
-function saveOneScrtchk(grid,rowindex,imgfl,eid)
-{
-    var arr = [];//声明空数组
-    var store=grid.store;
-    //疑问？？？？
-    var rc={};
-    var uid=store.getAt(rowindex).get('uid');
-    if (Ext.isEmpty(uid)) {
-        uid = 0;
-    }
-
-    if(imgfl==null || imgfl.length<32)
-        imgfl=store.getAt(rowindex).get('imgfl');
-
-
-    $.ajax({
-        url : ctxpath+'/hcc/saveHiddenCheckImg',
-        data:{hccRrlationId:uid,imgFile:imgfl,enterId:eid},
-        dataType : 'json',
-        contentType:"application/json",
-        type:'POST',
-        success:function(data){
-            //reload(grid.store);
-            if(data.status==0)
-            {
-                alert(data.msg);
-                return ;
-            }
-            var record=store.getAt(rowindex);
-            record.set("status",1);
-            record.set("imgfl",data.imgfl);
-            //record.set("ckdtm",);//保存时间
-            record.set("ckuid","孙唯耀");
-            record.set("uid",data.uid);
-            record.commit();
-        },
-        error:function(data){
-            alert('系统错误！');
-            return 0;
-        }
-    });
-}
+// function saveOneScrtchk(grid,rowindex,imgfl,eid)
+// {
+//     var arr = [];//声明空数组
+//     var store=grid.store;
+//     //疑问？？？？
+//     var rc={};
+//     var uid=store.getAt(rowindex).get('uid');
+//     if (Ext.isEmpty(uid)) {
+//         uid = 0;
+//     }
+//
+//     if(imgfl==null || imgfl.length<32)
+//         imgfl=store.getAt(rowindex).get('imgfl');
+//
+//
+//     $.ajax({
+//         url : ctxpath+'/hcc/saveHiddenCheckImg',
+//         data:{hccRrlationId:uid,imgFile:imgfl,enterId:eid},
+//         dataType : 'json',
+//         contentType:"application/json",
+//         type:'POST',
+//         success:function(data){
+//             //reload(grid.store);
+//             if(data.status==0)
+//             {
+//                 alert(data.msg);
+//                 return ;
+//             }
+//             var record=store.getAt(rowindex);
+//             record.set("status",1);
+//             record.set("imgfl",data.imgfl);
+//             //record.set("ckdtm",);//保存时间
+//             record.set("ckuid","孙唯耀");
+//             record.set("uid",data.uid);
+//             record.commit();
+//         },
+//         error:function(data){
+//             alert('系统错误！');
+//             return 0;
+//         }
+//     });
+// }
 // function saveOneRectify(grid,rowindex,imgfl)
 // {
 //     var arr = [];//声明空数组
@@ -176,7 +177,7 @@ function initUpload(grid, rowIndex, useType,enterId,uid,riskId, record) {
     // 上传数据功能
     var up = function (bt) {
         var filepath = Ext.getCmp('upload').getRawValue();// 上传文件名称的路径
-        var suffix = filepath.substring(filepath.lastIndexOf('.') + 1, filepath.length);
+        //var suffix = filepath.substring(filepath.lastIndexOf('.') + 1, filepath.length);
         if (filepath == "") {
             Ext.Msg.show({title: '提示', msg: '请选择文件!', buttons: Ext.Msg.OK, icon: Ext.MessageBox.INFOR});
             return;
@@ -219,16 +220,27 @@ function initUpload(grid, rowIndex, useType,enterId,uid,riskId, record) {
                         //     record(action.result.FileName);
                         //     return;
                         // }
-                        grid.getSelectionModel().select(rowIndex,true,false);
-                        var imgfl=action.result.fileName;
 
-                        if(useType=="check")//上传隐患排查
-                            record.set("checkImg",imgfl);
-                        // else if(strs[0]=="RECTIFY")//上传隐患整改
-                        //     record.set("rctimgfl",imgfl);
+                        var imgfl = action.result.fileName;
+
+                        //上传成功后端返回图片位置保存回checkimg列
+                        //上传隐患排查
+                        if (useType == "check") {
+                            grid.getSelectionModel().select(rowIndex, true, false);
+                            record.set("checkImg", imgfl);
+                            // else if(strs[0]=="RECTIFY")//上传隐患整改
+                            //     record.set("rctimgfl",imgfl);
+                            record.commit();
+                        }
+                        if(useType=="plane"){
+                            pmfile = imgfl;
+                        }
+                        if(useType=="fire"){
+                            xffile = imgfl;
+                        }
 
                         console.log("filenale",imgfl)
-                         record.commit();
+
                         // //var s = request.getSession();
                         // //s.setAttribute("SCRTCHK_MODIFY",1);
                         // if(strs[0]=="CRTCHK")//保存隐患排查
@@ -236,6 +248,7 @@ function initUpload(grid, rowIndex, useType,enterId,uid,riskId, record) {
                         // else if(strs[0]=="RECTIFY")//保存隐患整改
                         //     saveOneRectify(grid,rowIndex,imgfl,strs[1]);
                         Ext.MessageBox.alert("提示信息", "文件上传成功！！！");
+                        addPmtXftItem(enterId);
 
                     }
                 },

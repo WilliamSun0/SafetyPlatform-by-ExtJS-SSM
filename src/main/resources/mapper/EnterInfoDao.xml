@@ -1,0 +1,142 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.safetyplatform.dao.EnterInfoDao">
+    <!--目的:为dao接口方法提供sql语句配置
+    即针对dao接口中的方法编写我们的sql语句-->
+
+    <!--<select id="getEnterInfo" resultType="EnterpriseOtherInfo">-->
+
+    <!--</select>-->
+
+
+    <!--<update id="updateHiddenRiskCheck">-->
+<!--UPDATE enterprise_other_info SET postal_code = 'asdfas',credit_code='120121212',mail_addr='丰和北大道7788号',-->
+<!--enter_size = 1,cover_area = 1,staff_num = 1,assets_total = 1,register_capital = 1,sale_income = 1,year_revenue = 1,-->
+<!--economic_type = 1-->
+<!--WHERE enter_id=#{enterId};-->
+
+
+    <!--</update>-->
+
+    <!--UPDATE risk_manage.enterprise_other_info SET enter_id = 1, credit_code = '120121212',-->
+    <!--mail_addr = '丰和北大道7788号', postal_code = 'asdfas', build_time = '2019-04-10',-->
+    <!--enter_size = 1, cover_area = 1, staff_num = 1, assets_total = 1, register_capital = 1,-->
+    <!--sale_income = 1, year_revenue = 1, economic_type = 1, legal_person = null,-->
+    <!--work_title = null, office_call = null, legal_person_mobile = null, belong_industry = null,-->
+    <!--contact_person = null, contact_mobile = null, belong_group = null, safe_manage_dept = null,-->
+    <!--main_process = null, process_level = null, main_material = null,-->
+    <!--pro_harm_test = null, pro_harm = null, body_health = null WHERE UID = 1;-->
+    <update id="updateEnterOtherInfo" parameterType="com.safetyplatform.entity.EnterpriseOtherInfo">
+        update enterprise_other_info
+        <trim prefix="set" suffixOverrides=",">
+            <if test="postalCode != null">postal_code=#{postalCode},</if>
+            <!--<if test="enter_id != null">enter_id=#{enter_id},</if>-->
+            <if test="creditCode != null">credit_code=#{creditCode},</if>
+            <if test="mailAddr != null">mail_addr=#{mailAddr},</if>
+            <if test="postalCode != null">postal_code=#{postalCode},</if>
+            <if test="buildTime != null">build_time=#{buildTime},</if>
+            <if test="enterSize != null">enter_size=#{enterSize},</if>
+            <if test="coverArea != null">cover_area=#{coverArea},</if>
+            <if test="staffNum != null">staff_num=#{staffNum},</if>
+            <if test="assetsTotal != null">assets_total=#{assetsTotal},</if>
+            <if test="registerCapital != null">register_capital=#{registerCapital},</if>
+            <if test="saleIncome != null">sale_income=#{saleIncome},</if>
+            <if test="yearRevenue != null">year_revenue=#{yearRevenue},</if>
+            <if test="economicType != null">economic_type=#{economicType},</if>
+            <if test="legalPerson != null">legal_person=#{legalPerson},</if>
+            <if test="safeStandLevel != null">safe_stand_level=#{safeStandLevel},</if>
+            <if test="planeImg != null">plane_img=#{planeImg},</if>
+            <if test="fireImg != null">fire_img=#{fireImg},</if>
+            <if test="facadeImg != null">facade_img=#{facadeImg},</if>
+        </trim>
+        where enter_id=#{enterId}
+    </update>
+
+    <update id="updateEnterBaseInfo" parameterType="com.safetyplatform.entity.EnterpriseBaseInfo">
+        update enterprise_base_info
+        <trim prefix="set" suffixOverrides=",">
+            <!--<if test="enterId != null">enter_id=#{enterId},</if>-->
+
+            <if test="govId != null">gov_id=#{govId},</if>
+            <if test="thirdpartyId != null">thirdparty_id=#{thirdpartyId},</if>
+            <if test="enterName != null">enter_name=#{enterName},</if>
+            <if test="longitude != null">longitude=#{longitude},</if>
+            <if test="latitude != null">latitude=#{latitude},</if>
+            <if test="fatalDangerSource != null">fatal_danger_source=#{fatalDangerSource},</if>
+            <if test="highRiskEnterprise != null">high_risk_enterprise=#{highRiskEnterprise},</if>
+            <if test="dangerChemicalTech != null">danger_chemical_tech=#{dangerChemicalTech},</if>
+            <if test="restrictedSpace != null">restricted_space=#{restrictedSpace},</if>
+            <if test="dustExplosion != null">dust_explosion=#{dustExplosion},</if>
+
+        </trim>
+        where enter_id=#{enterId}
+    </update>
+
+    <update id="updateEnterIndustry">
+        update enter_business_relation
+        set type_id = #{typeId}
+        where enter_id=#{enterId}
+    </update>
+
+
+    <insert id="insertEnterOtherInfo" parameterType="com.safetyplatform.entity.EnterpriseOtherInfo">
+
+INSERT INTO enterprise_other_info (enter_id, credit_code, mail_addr, postal_code, build_time, enter_size, cover_area, staff_num, assets_total, register_capital, sale_income, year_revenue, economic_type, legal_person,safe_stand_level)
+VALUES (#{enterId}, #{creditCode}, #{mailAddr}, #{postalCode}, #{buildTime}, #{enterSize}, #{coverArea}, #{staffNum}, #{assetsTotal}, #{registerCapital}, #{saleIncome},
+#{yearRevenue}, #{economicType}, #{legalPerson},#{safeStandLevel});
+
+    </insert>
+
+    <!--是这样的，如果多于一个输入参数就要指定参数@param-->
+    <insert id="insertEnterIndustry">
+        insert into enter_business_relation(enter_id,type_id) values(#{enterId},#{typeId});
+    </insert>
+
+
+    <insert id="insertEnterBaseInfo" parameterType="com.safetyplatform.entity.EnterpriseBaseInfo" useGeneratedKeys="true" keyProperty="enterId">
+
+
+INSERT INTO enterprise_base_info (gov_id, thirdparty_id, enter_name, longitude, latitude, fatal_danger_source, high_risk_enterprise, danger_chemical_tech, restricted_space, dust_explosion)
+VALUES (#{govId}, #{thirdpartyId}, #{enterName}, #{longitude}, #{latitude}, #{fatalDangerSource}, #{highRiskEnterprise}, #{dangerChemicalTech}, #{restrictedSpace}, #{dustExplosion});
+
+    </insert>
+
+    <select id="getEnterInfo" resultMap="EnterpriseOtherInfoTemp">
+
+        select distinct eoi.*,ebi.danger_chemical_tech,ebi.dust_explosion,
+ebi.fatal_danger_source,ebi.gov_id,ebi.high_risk_enterprise,ebi.latitude,
+ebi.longitude,ebi.enter_name,ebi.restricted_space,ebr.type_id from enterprise_other_info eoi ,
+enterprise_base_info ebi,enter_business_relation ebr
+where eoi.enter_id = ebi.enter_id and ebr.enter_id = eoi.enter_id and eoi.enter_id = #{enterId};
+    </select>
+
+
+
+    <resultMap id="EnterpriseOtherInfoTemp" type="EnterpriseOtherInfo">
+
+        <result column="gov_id" property="znid"/>
+        <result column="pro_harm_test" property="proHarmTest" jdbcType="TINYINT" javaType="Boolean" />
+        <result column="body_health" property="bodyHealth" jdbcType="TINYINT" javaType="Boolean" />
+    </resultMap>
+
+    <select id="getZoneListByTownId" resultMap="ZoneListTemp">
+
+        select region_url,text from admin_division_info where father_id = #{townId}
+    </select>
+
+    <resultMap id="ZoneListTemp" type="ZoneBase">
+
+        <result column="region_url" property="znid"/>
+        <result column="text" property="name"/>
+
+    </resultMap>
+
+    <!--<insert id="add" parameterType="EStudent">-->
+        <!--<foreach collection="list" item="item" index="index" separator=";">-->
+            <!--INSERT INTO TStudent(name,age) VALUES(#{item.name}, #{item.age})-->
+        <!--</foreach>-->
+    <!--</insert>-->
+
+
+</mapper>

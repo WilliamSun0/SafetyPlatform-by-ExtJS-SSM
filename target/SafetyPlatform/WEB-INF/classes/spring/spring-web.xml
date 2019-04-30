@@ -33,6 +33,7 @@
     <!-- 访问以下静态资源时不需要经过前端控制器DispatcherServlet -->
     <mvc:resources mapping="/WEB-INF/**" location="/WEB-INF/"/>
     <mvc:resources mapping="/css/**" location="/css/"/>
+    <mvc:resources mapping="/resources/**" location="/resources/"/>
 
 
 </beans>

@@ -43,7 +43,6 @@ public class MainServiceImpl implements MainService {
     public JSONObject getHiddenRiskCheckCorrect(String enterId,int start,int limit,String businessType){
         JSONObject jsonObject = new JSONObject();
 
-        jsonObject.put("totalProperty",hiddenRiskCheckCorrectDao.getTotalNumHRCCL(enterId));
 
         if (!businessType.equals("other")) {
             if (businessType.equals("zyjk")){
@@ -62,6 +61,7 @@ public class MainServiceImpl implements MainService {
                 businessType = "消防";
             }
         }
+        jsonObject.put("totalProperty",hiddenRiskCheckCorrectDao.getTotalNumHRCCL(enterId,businessType));
 
         jsonObject.put("data",hiddenRiskCheckCorrectDao.getHiddenRiskCheckCorrectList(enterId,start,limit,businessType));
 

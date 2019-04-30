@@ -41,14 +41,13 @@ public class RegionTreeServiceImpl implements RegionTreeService {
     }
 
 
-
-
-    private List<RegionTree> diguiInitTree(List<RegionTree> list){//递归的加载树状图
+    private List<RegionTree> diguiInitTree(List<RegionTree> list) {//递归的加载树状图
+        //List<RegionTree> menus = new ArrayList<RegionTree>();
         List<RegionTree> menus = new ArrayList<RegionTree>();
-        List<RegionTree> tempList = new ArrayList<RegionTree>();
-        RegionTree temp = new RegionTree();
+
+        //RegionTree temp = new RegionTree();
         List<RegionTree> businessList = new ArrayList<RegionTree>();
-        RegionTree business = new RegionTree();
+        //RegionTree business = new RegionTree();
         List<RegionTree> children = new ArrayList<RegionTree>();
         RegionTree object = new RegionTree();
         RegionTree object2 = new RegionTree();
@@ -57,8 +56,10 @@ public class RegionTreeServiceImpl implements RegionTreeService {
         RegionTree object5 = new RegionTree();
 
         List<RegionTree> objectList = new ArrayList<RegionTree>();
+        List<RegionTree> objectList2 = new ArrayList<RegionTree>();
         //int x = 0;
-        for(RegionTree pri:list) {
+        for (RegionTree pri : list) {
+            List<RegionTree> tempList = new ArrayList<RegionTree>();
             children = regionTreeDao.getChildren(pri.getId());
 //            x++;
 //            if(x  == 1 ){
@@ -68,68 +69,93 @@ public class RegionTreeServiceImpl implements RegionTreeService {
             if (children.isEmpty()) {
 
                 //List<EnterBaseInfo> ebiList =
-                for(EnterBaseInfo ebi:regionTreeDao.getEnterListByZoneId(pri.getRegionUrl())){
-                    temp.setRegionUrl(String.valueOf(ebi.getEnterId()));
-                    temp.setText(ebi.getName());
-                    temp.setType(5);
+                //for (RegionTree pri2 : list) {
+                    for (EnterBaseInfo ebi : regionTreeDao.getEnterListByZoneId(pri.getRegionUrl())) {
+                        System.out.println(ebi.getEnterName());
+                        RegionTree temp = new RegionTree();
+                        temp.setRegionUrl(String.valueOf(ebi.getEnterId()));
+                        temp.setText(ebi.getEnterName());
+                        temp.setType(5);
 
 
-                    for(EnterBusiness eb:regionTreeDao.getEnterBusinessByEnterId(ebi.getEnterId())) {
-                        business.setRegionUrl(String.valueOf(eb.getTypeId()));
-                        business.setText(eb.getTypeName());
-                        business.setType(6);
-                        business.setLeaf(false);
+                        for (EnterBusiness eb : regionTreeDao.getEnterBusinessByEnterId(ebi.getEnterId())) {
+                            RegionTree business = new RegionTree();
+                            business.setRegionUrl(String.valueOf(eb.getTypeId()));
+                            business.setText(eb.getTypeName());
+                            business.setType(6);
+                            business.setLeaf(false);
 
-                        if(eb.getTypeName().equals("餐饮")){
-                            object.setRegionUrl("zyjk");
-                            object.setText("职业健康");
-                            object.setType(7);
-                            object.setLeaf(true);
-                            objectList.add(object);
-                            object2.setRegionUrl("aqgl");
-                            object2.setText("安全管理");
-                            object2.setType(7);
-                            object2.setLeaf(true);
-                            objectList.add(object2);
-                            object3.setRegionUrl("tzsb");
-                            object3.setText("特种设备");
-                            object3.setType(7);
-                            object3.setLeaf(true);
-                            objectList.add(object3);
-                            object4.setRegionUrl("dqaq");
-                            object4.setText("电气安全");
-                            object4.setType(7);
-                            object4.setLeaf(true);
-                            objectList.add(object4);
-                            object5.setRegionUrl("xfaq");
-                            object5.setText("消防安全");
-                            object5.setType(7);
-                            object5.setLeaf(true);
-                            objectList.add(object5);
+                            if (eb.getTypeId() == 1) {
+                                object.setRegionUrl("zyjk");
+                                object.setText("职业健康");
+                                object.setType(7);
+                                object.setLeaf(true);
+                                objectList.add(object);
+                                object2.setRegionUrl("aqgl");
+                                object2.setText("安全管理");
+                                object2.setType(7);
+                                object2.setLeaf(true);
+                                objectList.add(object2);
+                                object3.setRegionUrl("tzsb");
+                                object3.setText("特种设备");
+                                object3.setType(7);
+                                object3.setLeaf(true);
+                                objectList.add(object3);
+                                object4.setRegionUrl("dqaq");
+                                object4.setText("电气安全");
+                                object4.setType(7);
+                                object4.setLeaf(true);
+                                objectList.add(object4);
+                                object5.setRegionUrl("xfaq");
+                                object5.setText("消防安全");
+                                object5.setType(7);
+                                object5.setLeaf(true);
+                                objectList.add(object5);
 
 
-                            business.setChildren(objectList);
+                                business.setChildren(objectList);
+                            }
+                            businessList.add(business);
+
                         }
-                        businessList.add(business);
+                        temp.setChildren(businessList);
+                        tempList.add(temp);
 
                     }
-                    temp.setChildren(businessList);
-                    tempList.add(temp);
-                }
-
-                pri.setLeaf(false);
+                    pri.setLeaf(false);
                 pri.setChildren(tempList);
-                return list;
-            }
-            else {
-                List<RegionTree> prisNode = children;//
+                    //objectList2.add(pri2);
 
-                pri.setChildren(diguiInitTree(prisNode));
+
+                //showTree(objectList2);
+                //return objectList2;
+                menus.add(pri);
+            } else {
+                pri.setChildren(diguiInitTree(children));
                 menus.add(pri);
             }
         }
         return menus;
 
+    }
+
+    private int showTree(List<RegionTree> list) {
+        List<RegionTree> children = new ArrayList<RegionTree>();
+        for (RegionTree pri : list) {
+            children = pri.getChildren();
+//            x++;
+//            if(x  == 1 ){
+//                regionUrl = regionUrl.concat(pri.getRegionUrl());
+//            }
+            //regionUrl = regionUrl.concat(pri.getRegionUrl());
+            if (children==null)
+                return 1;
+         else {
+            System.out.println(pri.getRegionUrl()+pri.getText());
+            showTree(children);
+        }
+    }
+        return 1;
     }
 
 

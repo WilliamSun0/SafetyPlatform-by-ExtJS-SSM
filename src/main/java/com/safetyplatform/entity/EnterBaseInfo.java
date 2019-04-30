@@ -1,23 +1,23 @@
 package com.safetyplatform.entity;
 
 public class EnterBaseInfo {
-    private int enterId;//节点id
-    private String name;//节点名称
+    private long enterId;//
+    private String enterName;//
 
 
-    public int getEnterId() {
+    public long getEnterId() {
         return enterId;
     }
 
-    public void setEnterId(int enterId) {
+    public void setEnterId(long enterId) {
         this.enterId = enterId;
     }
 
-    public String getName() {
-        return name;
+    public String getEnterName() {
+        return enterName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setEnterName(String enterName) {
+        this.enterName = enterName;
     }
 }

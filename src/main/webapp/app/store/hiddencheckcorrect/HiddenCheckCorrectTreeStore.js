@@ -3,7 +3,7 @@ Ext.define('SafetyPlatform.store.hiddencheckcorrect.HiddenCheckCorrectTreeStore'
 
     alias:'store.hckts',
 
-    model:'SafetyPlatform.model.riskcomlist.test',
+    //model:'SafetyPlatform.model.riskcomlist.test',
 
     root: {
         expanded: true,
@@ -80,6 +80,7 @@ Ext.define('SafetyPlatform.store.hiddencheckcorrect.HiddenCheckCorrectTreeStore'
     //         }
     //     ]
     // }
+
 
 });
 

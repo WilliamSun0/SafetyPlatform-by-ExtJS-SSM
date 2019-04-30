@@ -29,7 +29,8 @@ public interface RegionTreeDao {
     List<RegionTree> getChildren(@Param("noteId") String noteId);
 
 
-    List<EnterBusiness> getEnterBusinessByEnterId(@Param("noteId") int noteId);
+    List<EnterBusiness> getEnterBusinessByEnterId(@Param("noteId") long noteId);
+
 
     /**
      * 根据偏移量得到风险企业列表

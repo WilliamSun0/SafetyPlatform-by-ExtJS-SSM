@@ -33,6 +33,7 @@ Ext.define('SafetyPlatform.view.main.Main', {
 				xtype : 'maintop',
 				region : 'north' // 把他放在最顶上
 			},
+
 			{
 				region : 'center', // 中间面版
 				xtype : 'panel',

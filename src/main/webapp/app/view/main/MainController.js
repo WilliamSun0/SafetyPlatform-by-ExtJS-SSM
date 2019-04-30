@@ -60,17 +60,6 @@ Ext.define('SafetyPlatform.view.main.MainController', {
 	
 	// 选择了主菜单上的菜单后执行
     onRegionChartClick : function() {
-		var maincenter = this.getView().down('panel');
-
-		maincenter.removeAll();
-
-		console.log('swy');
-		
-		maincenter.add({
-			xtype : 'modulepanel',
-			closable : false,
-			reorderable : true
-		});
 
         //this.getView().down('regionmenutree').reload();
         //Ext.ComponentQuery.query('regionmenutree').load();
@@ -91,6 +80,32 @@ Ext.define('SafetyPlatform.view.main.MainController', {
         });
 
     },
+    onEnterInfoManageClick:function() {
+        var maincenter = this.getView().down('panel');
 
+        maincenter.removeAll();
 
+        console.log('onEnterInfoManageClick');
+
+        maincenter.add({
+            xtype : 'modulepanel',
+            closable : false,
+            reorderable : true,
+			mytype:1
+        });
+
+    },
+    onHiddenRiskCheckCorrectClick:function() {
+        var maincenter = this.getView().down('panel');
+
+        maincenter.removeAll();
+
+        console.log('onHiddenRiskCheckCorrectClick');
+
+        maincenter.add({
+            xtype : 'modulepanel',
+            closable : false,
+            reorderable : true
+        });
+    }
 });

@@ -1,6 +1,7 @@
 Ext.define('SafetyPlatform.view.module_login.Login', {
     extend: 'Ext.window.Window',
     xtype: 'login',
+    id:'loginwindow',
 
     requires: [
         'Ext.form.Panel',
@@ -18,9 +19,10 @@ Ext.define('SafetyPlatform.view.module_login.Login', {
     items: {
         xtype:'form',
         reference: 'form',
+
         items: [{
             xtype:'textfield',
-            name: 'username',
+            name: 'userName',
             fieldLabel: '用户名',
             allowBlank: false
         },{
