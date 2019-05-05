@@ -141,26 +141,26 @@ function initpanel(tid,eid,judge) {
                             }
                         ]
                 },
-                // {
-                //     layout: 'column',
-                //     frame: true,
-                //     items:
-                //         [
-                //
-                //             {
-                //                 xtype: 'textfield',
-                //                 fieldLabel: '信用代码',
-                //                 name: 'creditCode',
-                //                 width: '50%'
-                //             },
-                //             {
-                //                 xtype: 'textfield',
-                //                 fieldLabel: '通信地址',
-                //                 name: 'mailAddr',
-                //                 width: '50%'
-                //             }
-                //         ]
-                // },
+                {
+                    layout: 'column',
+                    frame: true,
+                    items:
+                        [
+
+                            {
+                                xtype: 'textfield',
+                                fieldLabel: '信用代码',
+                                name: 'creditCode',
+                                width: '50%'
+                            },
+                            {
+                                xtype: 'textfield',
+                                fieldLabel: '通信地址',
+                                name: 'mailAddr',
+                                width: '50%'
+                            }
+                        ]
+                },
                 {
                     layout: 'column',
                     frame: true,
@@ -197,15 +197,16 @@ function initpanel(tid,eid,judge) {
                             //     xtype: 'datefield',
                             //     fieldLabel: '成立时间',
                             //     name: 'buildTime',
-                            //     width: '50%'
+                            //     width: '50%',
+                            //     format:'Y-M-D'
                             // }
                         ]
                 },
-                // {
-                //     layout: 'column',
-                //     frame: true,
-                //     items:
-                //         [
+                {
+                    layout: 'column',
+                    frame: true,
+                    items:
+                        [
                 //             {
                 //                 xtype: 'numberfield',
                 //                 fieldLabel: '企业规模',
@@ -225,99 +226,99 @@ function initpanel(tid,eid,judge) {
                 //                         ]
                 //                 })
                 //             },
-                //             {
-                //                 xtype : 'numberfield',
-                //                 fieldLabel: '占地面积',
-                //                 name: 'coverArea',
-                //                 width: '50%',
-                //                 xtype: 'combo',
-                //                 editable: false,
-                //                 valueField: 'value',
-                //                 displayFiled: 'text',
-                //                 store: new Ext.data.ArrayStore({
-                //                     fields: ['value', 'text'],
-                //                     data:
-                //                         [
-                //                             [5, '<200'],
-                //                             [10, '200-1000'],
-                //                             [15, '1000-5000'],
-                //                             [20, '5000-15000'],
-                //                             [30, '>15000']
-                //                         ]
-                //                 })
-                //             }
-                //         ]
-                // },
-                // {
-                //     layout: 'column',
-                //     frame: true,
-                //     items:
-                //         [
-                //             {
-                //                 xtype : 'numberfield',
-                //                 fieldLabel: '职工人数',
-                //                 name: 'staffNum',
-                //                 width: '50%',
-                //                 xtype: 'combo',
-                //                 editable: false,
-                //                 valueField: 'value',
-                //                 displayFiled: 'text',
-                //                 store: new Ext.data.ArrayStore({
-                //                     fields: ['value', 'text'],
-                //                     data:
-                //                         [
-                //                             [5, '<20'],
-                //                             [10, '200-100'],
-                //                             [20, '100-300'],
-                //                             [30, '300-1000'],
-                //                             [50, '>1000']
-                //                         ]
-                //                 })
-                //             },
-                //             {
-                //                 xtype: 'numberfield',
-                //                 fieldLabel: '  资产总额',
-                //                 name: 'assetsTotal',
-                //                 width: '50%'
-                //             }
-                //         ]
-                // },
-                // {
-                //     layout: 'column',
-                //     frame: true,
-                //     items:
-                //         [
-                //             {
-                //                 xtype: 'numberfield',
-                //                 fieldLabel: '  注册资金',
-                //                 name: 'registerCapital',
-                //                 width: '50%'
-                //             },
-                //             {
-                //                 xtype : 'numberfield',
-                //                 //fieldLabel : '  年销售收入',
-                //                 name: 'saleIncome',
-                //                 width: '50%',
-                //                 xtype: 'combo',
-                //                 fieldLabel: '年销售收入',
-                //                 editable: false,
-                //                 valueField: 'value',
-                //                 displayFiled: 'text',
-                //                 store: new Ext.data.ArrayStore({
-                //                     fields: ['value', 'text'],
-                //                     data:
-                //                         [
-                //                             [3, '<100'],
-                //                             [5, '100-300'],
-                //                             [10, '300-2000'],
-                //                             [15, '2000-40000'],
-                //                             [22, '>40000']
-                //                         ]
-                //                 })
-                //
-                //             }
-                //         ]
-                // },
+                            {
+                                xtype : 'numberfield',
+                                fieldLabel: '占地面积',
+                                name: 'coverArea',
+                                width: '50%',
+                                xtype: 'combo',
+                                editable: false,
+                                valueField: 'value',
+                                displayFiled: 'text',
+                                store: new Ext.data.ArrayStore({
+                                    fields: ['value', 'text'],
+                                    data:
+                                        [
+                                            [5, '<200'],
+                                            [10, '200-1000'],
+                                            [15, '1000-5000'],
+                                            [20, '5000-15000'],
+                                            [30, '>15000']
+                                        ]
+                                })
+                            }
+                        ]
+                },
+                {
+                    layout: 'column',
+                    frame: true,
+                    items:
+                        [
+                            {
+                                xtype : 'numberfield',
+                                fieldLabel: '职工人数',
+                                name: 'staffNum',
+                                width: '50%',
+                                xtype: 'combo',
+                                editable: false,
+                                valueField: 'value',
+                                displayFiled: 'text',
+                                store: new Ext.data.ArrayStore({
+                                    fields: ['value', 'text'],
+                                    data:
+                                        [
+                                            [5, '<20'],
+                                            [10, '200-100'],
+                                            [20, '100-300'],
+                                            [30, '300-1000'],
+                                            [50, '>1000']
+                                        ]
+                                })
+                            },
+                            // {
+                            //     xtype: 'numberfield',
+                            //     fieldLabel: '  资产总额',
+                            //     name: 'assetsTotal',
+                            //     width: '50%'
+                            // }
+                        ]
+                },
+                {
+                    layout: 'column',
+                    frame: true,
+                    items:
+                        [
+                            // {
+                            //     xtype: 'numberfield',
+                            //     fieldLabel: '  注册资金',
+                            //     name: 'registerCapital',
+                            //     width: '50%'
+                            // },
+                            {
+                                xtype : 'numberfield',
+                                //fieldLabel : '  年销售收入',
+                                name: 'saleIncome',
+                                width: '50%',
+                                xtype: 'combo',
+                                fieldLabel: '年销售收入',
+                                editable: false,
+                                valueField: 'value',
+                                displayFiled: 'text',
+                                store: new Ext.data.ArrayStore({
+                                    fields: ['value', 'text'],
+                                    data:
+                                        [
+                                            [3, '<100'],
+                                            [5, '100-300'],
+                                            [10, '300-2000'],
+                                            [15, '2000-40000'],
+                                            [22, '>40000']
+                                        ]
+                                })
+
+                            }
+                        ]
+                },
                 // {
                 //     layout: 'column',
                 //     frame: true,
@@ -458,46 +459,46 @@ function initpanel(tid,eid,judge) {
                 //             }
                 //         ]
                 // },
-                // {
-                //     layout: 'column',
-                //     frame: true,
-                //     items:
-                //         [
-                //             {
-                //                 xtype: 'combo',
-                //                 fieldLabel: '工艺等级',
-                //                 name: 'processLevel',
-                //                 //width:'20%',
-                //                 valueField: 'value',
-                //                 displayFiled: 'text',
-                //                 editable: false,
-                //                 store: new Ext.data.ArrayStore({
-                //                     fields: ['value', 'text'],
-                //                     data:
-                //                         [
-                //                             [0, '零级工艺'],
-                //                             [10, '一级工艺'],
-                //                             [20, '二级工艺'],
-                //                             [30, '三级工艺'],
-                //                             [40, '四级工艺'],
-                //                             [50, '五级工艺'],
-                //                             [60, '六级工艺'],
-                //                             [70, '七级工艺'],
-                //                             [80, '八级工艺'],
-                //                             [90, '九级工艺'],
-                //                             [100, '十级工艺']
-                //
-                //                         ]
-                //                 })
-                //             },
-                //             {
-                //                 xtype: 'textfield',
-                //                 fieldLabel: '涉及主要物料',
-                //                 name: 'mainMaterial',
-                //                 width: '50%'
-                //             }
-                //         ]
-                // },
+                {
+                    layout: 'column',
+                    frame: true,
+                    items:
+                        [
+                            {
+                                xtype: 'combo',
+                                fieldLabel: '工艺等级',
+                                name: 'processLevel',
+                                //width:'20%',
+                                valueField: 'value',
+                                displayFiled: 'text',
+                                editable: false,
+                                store: new Ext.data.ArrayStore({
+                                    fields: ['value', 'text'],
+                                    data:
+                                        [
+                                            [0, '零级工艺'],
+                                            [10, '一级工艺'],
+                                            [20, '二级工艺'],
+                                            [30, '三级工艺'],
+                                            [40, '四级工艺'],
+                                            [50, '五级工艺'],
+                                            [60, '六级工艺'],
+                                            [70, '七级工艺'],
+                                            [80, '八级工艺'],
+                                            [90, '九级工艺'],
+                                            [100, '十级工艺']
+
+                                        ]
+                                })
+                            },
+                            // {
+                            //     xtype: 'textfield',
+                            //     fieldLabel: '涉及主要物料',
+                            //     name: 'mainMaterial',
+                            //     width: '50%'
+                            // }
+                        ]
+                },
                 // {
                 //     layout: 'column',
                 //     frame: true,
@@ -601,51 +602,51 @@ function initpanel(tid,eid,judge) {
                 //             }
                 //         ]
                 // },
-                // {
-                //     layout: 'column',
-                //     frame: true,
-                //     items:
-                //         [
-                //             {
-                //                 xtype: 'combo',
-                //                 fieldLabel: '物料的火灾危害性',
-                //                 name: 'wlhzwhx',
-                //                 valueField: 'value',
-                //                 displayFiled: 'text',
-                //                 width: '50%',
-                //                 editable: false,
-                //                 store: new Ext.data.Store({
-                //                     fields: ['value', 'text'],
-                //                     data:
-                //                         [
-                //                             [100, '甲类'],
-                //                             [80, '乙类'],
-                //                             [50, '丙类'],
-                //                             [30, '丁类'],
-                //                             [10, '戊类'],
-                //                             [0, '没有']
-                //                         ]
-                //                 })
-                //             },
-                //             {
-                //                 xtype: 'combo',
-                //                 fieldLabel: '安全投入计划或方案',
-                //                 name: 'aqfa',
-                //                 valueField: 'value',
-                //                 displayFiled: 'text',
-                //                 width: '25%',
-                //                 editable: false,
-                //                 store: new Ext.data.ArrayStore({
-                //                     fields: ['value', 'text'],
-                //                     data:
-                //                         [
-                //                             [1, '有'],
-                //                             [0, '无']
-                //                         ]
-                //                 })
-                //             }
-                //         ]
-                // },
+                {
+                    layout: 'column',
+                    frame: true,
+                    items:
+                        [
+                            {
+                                xtype: 'combo',
+                                fieldLabel: '物料的火灾危害性',
+                                name: 'materialFireDanger',
+                                valueField: 'value',
+                                displayFiled: 'text',
+                                width: '50%',
+                                editable: false,
+                                store: new Ext.data.Store({
+                                    fields: ['value', 'text'],
+                                    data:
+                                        [
+                                            [100, '甲类'],
+                                            [80, '乙类'],
+                                            [50, '丙类'],
+                                            [30, '丁类'],
+                                            [10, '戊类'],
+                                            [0, '没有']
+                                        ]
+                                })
+                            },
+                            // {
+                            //     xtype: 'combo',
+                            //     fieldLabel: '安全投入计划或方案',
+                            //     name: 'aqfa',
+                            //     valueField: 'value',
+                            //     displayFiled: 'text',
+                            //     width: '25%',
+                            //     editable: false,
+                            //     store: new Ext.data.ArrayStore({
+                            //         fields: ['value', 'text'],
+                            //         data:
+                            //             [
+                            //                 [1, '有'],
+                            //                 [0, '无']
+                            //             ]
+                            //     })
+                            // }
+                        ]
+                },
                 // {
                 //     layout: 'column',
                 //     frame: true,

@@ -1,8 +1,7 @@
 package com.safetyplatform.service;
 
-import com.safetyplatform.entity.EnterpriseOtherInfo;
-import com.safetyplatform.entity.ZoneBase;
-import org.springframework.stereotype.Service;
+import com.safetyplatform.entity.enter_info.EnterpriseOtherInfo;
+import com.safetyplatform.entity.enter_info.ZoneBase;
 
 import java.util.List;
 

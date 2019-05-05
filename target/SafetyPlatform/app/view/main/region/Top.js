@@ -35,7 +35,8 @@ Ext.define('SafetyPlatform.view.main.region.Top', {
             glyph: 0xf0e4
         }, {
             text : '行政执法',
-            glyph: 0xf0a1
+            glyph: 0xf0a1,
+            handler:'onLowEnforceClick',
         },{
             text : '企业信息管理',
             handler:'onEnterInfoManageClick',
@@ -85,7 +86,8 @@ Ext.define('SafetyPlatform.view.main.region.Top', {
             },
             style : 'font-size : 20px; color : blue;'
         }, ' '];
-        var menus = Ext.util.Cookies.get("menus");
+
+        var menus = this.up("container").menus;
 
 
         for (var i = 0;i<menus.length;i++){
@@ -99,7 +101,7 @@ Ext.define('SafetyPlatform.view.main.region.Top', {
         this.items = nb;
         console.log('menus',menus) ;
         //cookie undefined，另外一个问题是如果用户不允许保存cookie
-        console.log('user',userName.getvalue) ;
+        //console.log('user',userName.getvalue) ;
         this.callParent();
     }
 

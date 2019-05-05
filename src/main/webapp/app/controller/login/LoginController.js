@@ -17,6 +17,7 @@ Ext.define('SafetyPlatform.controller.login.LoginController',{
                     var now = new Date();
                     var expiry = new Date(now.getTime() +  24 * 60 * 60 * 1000);//保存一天
                     //保存登陆信息
+                    //做实验如果用户不允许保存cookie
                     Ext.util.Cookies.set('menus',action.result.exclusiveMenus,expiry);
                     //这里加密存储密码
                     Ext.util.Cookies.set('userName',1,expiry);
@@ -26,7 +27,10 @@ Ext.define('SafetyPlatform.controller.login.LoginController',{
 
                     // Add the main view to the viewport
                     Ext.create({
-                        xtype: 'app-main'
+                        xtype: 'app-main',
+                        menus:action.result.exclusiveMenus,
+                        userName:1,
+                        password:1
                     });
 
                 },

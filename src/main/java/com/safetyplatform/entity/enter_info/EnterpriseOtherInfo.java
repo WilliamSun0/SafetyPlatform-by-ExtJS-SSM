@@ -1,4 +1,4 @@
-package com.safetyplatform.entity;
+package com.safetyplatform.entity.enter_info;
 
 
 import java.sql.Timestamp;
@@ -32,7 +32,7 @@ public class EnterpriseOtherInfo {
 //  private String belongGroup;
 //  private String safeManageDept;
 //  private String mainProcess;
-//  private long processLevel;
+  private long processLevel;
 //  private String mainMaterial;
 //  private boolean proHarmTest;
 //  private String proHarm;
@@ -51,14 +51,32 @@ public class EnterpriseOtherInfo {
 
   private String znid;//所属区域
   private int typeId;//所属行业
+    private int ebrId;
 
     private String planeImg;
     private String fireImg;
     private String facadeImg;//门面图像
 
+    private int materialFireDanger;
+
+    public int getMaterialFireDanger() {
+        return materialFireDanger;
+    }
+
+    public void setMaterialFireDanger(int materialFireDanger) {
+        this.materialFireDanger = materialFireDanger;
+    }
+
     public EnterpriseOtherInfo() {
     }
 
+    public int getEbrId() {
+        return ebrId;
+    }
+
+    public void setEbrId(int ebrId) {
+        this.ebrId = ebrId;
+    }
 
     public long getEnterId() {
         return enterId;
@@ -282,5 +300,13 @@ public class EnterpriseOtherInfo {
 
     public void setFacadeImg(String facadeImg) {
         this.facadeImg = facadeImg;
+    }
+
+    public long getProcessLevel() {
+        return processLevel;
+    }
+
+    public void setProcessLevel(long processLevel) {
+        this.processLevel = processLevel;
     }
 }

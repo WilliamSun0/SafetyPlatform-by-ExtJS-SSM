@@ -4,95 +4,63 @@
 
 
 Ext.define('SafetyPlatform.view.module.Module', {
-	extend : 'Ext.panel.Panel',
- 
-	alias : 'widget.modulepanel',
- 
-	requires : ['SafetyPlatform.view.module.ModuleController','SafetyPlatform.view.module.ModuleModel'],
- 
-	uses : ['SafetyPlatform.view.module.region.RegionMenuTree','SafetyPlatform.view.module.enterinfo.EnterInfoTree','SafetyPlatform.view.main.region.Center'],
- 
-	controller : 'module',
-	// MVVM架构的控制器的名称，main控制器会自动加载，这个控制器不会自动加载，需要在requires中指定，不知道是为什么
-	viewModel : {
-		type : 'module'
-	},
-	
-	layout : 'border', // 模块采用border布局
- 
-	initComponent : function() {
+    extend: 'Ext.panel.Panel',
+
+    alias: 'widget.modulepanel',
+
+    requires: ['SafetyPlatform.view.module.ModuleController', 'SafetyPlatform.view.module.ModuleModel'],
+
+    uses: ['SafetyPlatform.view.module.region.RegionMenuTree',
+        'SafetyPlatform.view.module.enterinfo.EnterInfoTree',
+        'SafetyPlatform.view.module_executelaw.ExecuteLawTree',
+        'SafetyPlatform.view.main.region.Center'],
+
+    controller: 'module',
+    // MVVM架构的控制器的名称，main控制器会自动加载，这个控制器不会自动加载，需要在requires中指定，不知道是为什么
+    viewModel: {
+        type: 'module'
+    },
+
+    layout: 'border', // 模块采用border布局
+
+    initComponent: function () {
         var mytype = '';
-        var myid = ''
-		//this.glyph = this.getViewModel().get('tf_glyph'); // 由于上面的glyph的bind无效，因此需要在这里加入glyph的设置
-		if(this.mytype == 1){
-			mytype = 'enterinfotree'
+        var myid = 'tabpanel';
+        mytype = 'regionmenutree';
+        //this.glyph = this.getViewModel().get('tf_glyph'); // 由于上面的glyph的bind无效，因此需要在这里加入glyph的设置
+        if (this.mytype == 1) {
+            mytype = 'enterinfotree'
 
-		}else{
-			mytype = 'regionmenutree'
-		}
+        } else if (this.mytype == 2) {
+            mytype = 'executelawtree';
+            myid = 'panel';
+        }
 
-        console.log("mytype",this.mytype);
+        console.log("mytype", this.mytype);
 
-		this.items = [{
+        this.items = [{
 
-                // xtype : 'regionmenutree', // 导航区域
-                // region : 'west',
-                // width : 250,
-                // mytype : this.mytype,
-                //collapsible : true,
-                //split : true
 
-					//collapsible : true,
-					//split : true
-					// 	xtype:'viewport',
-					// 	autoShow:true,
-					// 	header:false,
-					// 	width:'100%',
-					// 	height:'100%',
-					// 	header:false,
-					// 	layout:'hbox',
-					// 	y:0,
-					// 	//closable:true,
-					// 	items: [
-					// 		{
-					// 			items :
-					// 				[
+            items: [{
+                xtype:mytype,
+            }], // 导航区域
+            region: 'west',
+            // split : true,
+            //contentEl : 'contentLeft',
+            width:250,
+            collapsible:true,
+            mytype: this.mytype
 
-                                            xtype : mytype, // 导航区域
-                                            region : 'west',
-											 width : 250,
-											// split : true,
-                                            //contentEl : 'contentLeft',
-                                            mytype : this.mytype
-						// 				}
-						// 			],
-						// 		flex:1,
-						// 		y:0,
-						// 		contentEl : 'contentLeft',
-						// 		id : 'leftContent',
-						// 		width: "100%",
-						// 		autoScroll: true,
-                        //
-						// 	},
-						// 	{
-						// 		flex:4,
-						// 		y:0,
-						// 		contentEl : 'contentIframe',
-						// 		id : 'mainContent',
-						// 		height : "100%"
-                        //
-						// 	}
-						// ]
-					},
+        },
 
-					{
-						region : 'center', // 中间面版
-						xtype : 'tabpanel',
-						id:'centerpanel',
-                        layout:'fit'
-					}];
+            {
+                region: 'center', // 中间面版
+                xtype: myid,
+                id: 'centerpanel',
+                layout: 'fit'
+            }];
 
-		this.callParent();
-	}
- 
+        this.callParent();
+    }
+
 });

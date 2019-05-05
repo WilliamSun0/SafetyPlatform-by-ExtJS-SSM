@@ -6,29 +6,14 @@
     即针对dao接口中的方法编写我们的sql语句-->
 
 
-    <!--<update id="reduceNumber">-->
-        <!--UPDATE seckill-->
-        <!--SET numbers = numbers-1-->
-        <!--WHERE seckill_id=#{seckillId}-->
-        <!--AND start_time <![CDATA[ <= ]]> #{killTime}-->
-        <!--AND end_time >= #{killTime}-->
-        <!--AND numbers > 0;-->
-    <!--</update>-->
-
-    <!--<select id="queryById" resultType="Seckill" parameterType="long">-->
-        <!--SELECT *-->
-        <!--FROM seckill-->
-        <!--WHERE seckill_id=#{seckillId}-->
-    <!--</select>-->
-
     <select id="queryTest" resultType="Test">
         SELECT *
         FROM test_info
         where test_info.name=#{regionId}
     </select>
 
-    <select id="queryAll" resultType="RiskEnterGrade">
-select name as enter_name, fatal_danger_source,high_risk_enterprise,
+    <select id="queryAllEnterRisk" resultType="RiskEnterGrade">
+select enter_name, fatal_danger_source,high_risk_enterprise,
    danger_chemical_tech,
    restricted_space,
    dust_explosion,
@@ -37,8 +22,38 @@ select name as enter_name, fatal_danger_source,high_risk_enterprise,
    count(ehr.risk_id) as risk_num
 
    from enterprise_base_info ebi,enter_business_relation ebr,business_type_info bti,admin_division_info adi,enter_hidden_relation ehr
-   where ebi.enter_id = ebr.enter_id and ebr.type_id = bti.type_id and adi.id = ebi.gov_id and ebi.enter_id = ehr.enter_id;
+   where ebi.enter_id = ebr.enter_id and ebr.type_id = bti.type_id and adi.region_url = ebi.gov_id and ebi.enter_id = ehr.enter_id;
     </select>
+
+
+    <select id="queryEnterOtherInfoForRisk" resultType="RiskIndexA">
+        SELECT cover_area,staff_num,sale_income,material_fire_danger,process_level
+        FROM enterprise_other_info
+        where enter_id = #{enterId};
+    </select>
+
+
+
+    <select id="queryEnterHiddenRiskNum" resultType="java.lang.Integer">
+        SELECT count(*)
+        FROM enter_hidden_relation ehr ,zyjk
+        where ehr.risk_id = zyjk.risk_id and ehr.enter_id = #{enterId}
+        group by danger_level_num order by danger_level_num asc;
+    </select>
+
+    <select id="queryEHRNoCorrectNum" resultType="java.lang.Integer">
+        SELECT count(*)
+        FROM enter_hidden_relation ehr ,zyjk
+        where ehr.risk_id = zyjk.risk_id and ehr.enter_id = #{enterId} and ehr.status = 1;
+        group by danger_level_num order by danger_level_num asc;
+    </select>
+
+    <select id="queryEnterAccidentList" resultType="java.lang.Integer">
+        SELECT max(acc_type)
+        FROM enter_acc_info
+        where enter_id = #{enterId}
+    </select>
+
 
 
 

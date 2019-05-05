@@ -136,8 +136,8 @@ function initScrthrt(eid)
 	    //sm: selModel,
 	    tbar: [ 
 	    	 
-	        {  
-	        	icon: '../pagesExt/images/add.png',  // Use a URL in the icon config                
+	        {
+                glyph: 0xf0fe,  // Use a URL in the icon config
                 tooltip: '增加',
 	            handler: function(){
 	            	var p = new Ext.data.Record({                 
@@ -149,8 +149,8 @@ function initScrthrt(eid)
 	                  
 	            }  
 	        },  
-	        {  
-	        	icon: '../pagesExt/images/save.png',  // Use a URL in the icon config                
+	        {
+                glyph: 0xf0a0,  // Use a URL in the icon config
                 tooltip: '保存',
 	            handler: function(){ 
 	            	var arr = [];//声明空数组
@@ -159,17 +159,16 @@ function initScrthrt(eid)
 	            		arr.push(record.data);
 	            	});
 	            	$.ajax({
-	            		url : ctxpath+'/Enterprise/svTrbl',
+	            		url : '/SafetyPlatform/Enterprise/svTrbl',
 	            		data:JSON.stringify(arr),
 	            		dataType : 'json',
 	            		contentType:"application/json", 
 	            		type:'POST',                                  
 	            		success:function(data){ 
-	            			trblStore.load();  
-	            			
+	            			trblStore.load();
 	            		},
 	            		error:function(data){
-	            			MsgBox('出错了！！！');
+	            			//MsgBox('出错了！！！');
 	                    }
 	            	});
 	            }  

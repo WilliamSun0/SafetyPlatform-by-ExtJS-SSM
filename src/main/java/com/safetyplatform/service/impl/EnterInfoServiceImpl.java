@@ -1,12 +1,10 @@
 package com.safetyplatform.service.impl;
 
 import com.safetyplatform.dao.EnterInfoDao;
-import com.safetyplatform.entity.EnterBaseInfo;
-import com.safetyplatform.entity.EnterpriseBaseInfo;
-import com.safetyplatform.entity.EnterpriseOtherInfo;
-import com.safetyplatform.entity.ZoneBase;
+import com.safetyplatform.entity.enter_info.EnterpriseBaseInfo;
+import com.safetyplatform.entity.enter_info.EnterpriseOtherInfo;
+import com.safetyplatform.entity.enter_info.ZoneBase;
 import com.safetyplatform.service.EnterInfoService;
-import org.apache.ibatis.jdbc.Null;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,8 +1,6 @@
 package com.safetyplatform.dao;
 
-import com.safetyplatform.entity.EnterBaseInfo;
-import com.safetyplatform.entity.EnterBusiness;
-import org.apache.ibatis.annotations.Param;
+import com.safetyplatform.entity.enter_info.EnterBusiness;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

@@ -57,20 +57,7 @@ Ext.define('SafetyPlatform.view.module.region.HiddenCheckCorrectGrid', {
 
     ],
 
-//     private String checkMan;//节点id
-// private String correctMan;//节点名称
-// private String partObject;//隐患名
-// private String mainType;//节点点击的请求路径
-// private String riskDescription;//节点的图标，folder还是file
-// private String checkVoucher;//父级菜单
-// private String correctVoucher;//区划等级
-// private String dangerLevel;//父级菜单
-// private String dangerLevelNum;//区划等级
-//     store: {
-//         type: 'hckgs',
-//         //regionId:this.regionId
-//         //extraParams:{regionId:this.regionId}
-//     },
+
     initComponent:function(){
 
         var store1 =Ext.create('SafetyPlatform.store.hiddencheckcorrect.HiddenCheckCorrectGridStore', {

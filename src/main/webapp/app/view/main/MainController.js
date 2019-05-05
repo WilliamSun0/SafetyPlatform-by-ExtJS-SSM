@@ -107,5 +107,20 @@ Ext.define('SafetyPlatform.view.main.MainController', {
             closable : false,
             reorderable : true
         });
-    }
+    },
+
+    onLowEnforceClick:function() {
+        var maincenter = this.getView().down('panel');
+
+        maincenter.removeAll();
+
+        console.log('行政执法');
+
+        maincenter.add({
+            xtype : 'modulepanel',
+            closable : false,
+            reorderable : true,
+            mytype:2
+        });
+    },
 });

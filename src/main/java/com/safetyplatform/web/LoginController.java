@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.ArrayList;
+
 
 @Controller
 //@RequestMapping("/SafetyPlatform")
@@ -29,9 +31,12 @@ public class LoginController {
 
         JSONObject jsonObject = new JSONObject();
         //JSONObject menus = new JSONObject();
-        int[] menus = new int[2];
-        menus[0] =3;
-        menus[1] = 4;
+        ArrayList menus = new ArrayList();
+        //int[] menus = new int[10];
+        menus.add(3);
+        menus.add(4);
+        menus.add(2);
+
 
         jsonObject.put("success", true);
         jsonObject.put("restMsg", loginInfo.getUserName());

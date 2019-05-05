@@ -27,7 +27,7 @@
     <!--contact_person = null, contact_mobile = null, belong_group = null, safe_manage_dept = null,-->
     <!--main_process = null, process_level = null, main_material = null,-->
     <!--pro_harm_test = null, pro_harm = null, body_health = null WHERE UID = 1;-->
-    <update id="updateEnterOtherInfo" parameterType="com.safetyplatform.entity.EnterpriseOtherInfo">
+    <update id="updateEnterOtherInfo" parameterType="com.safetyplatform.entity.enter_info.EnterpriseOtherInfo">
         update enterprise_other_info
         <trim prefix="set" suffixOverrides=",">
             <if test="postalCode != null">postal_code=#{postalCode},</if>
@@ -53,7 +53,7 @@
         where enter_id=#{enterId}
     </update>
 
-    <update id="updateEnterBaseInfo" parameterType="com.safetyplatform.entity.EnterpriseBaseInfo">
+    <update id="updateEnterBaseInfo" parameterType="com.safetyplatform.entity.enter_info.EnterpriseBaseInfo">
         update enterprise_base_info
         <trim prefix="set" suffixOverrides=",">
             <!--<if test="enterId != null">enter_id=#{enterId},</if>-->
@@ -73,14 +73,14 @@
         where enter_id=#{enterId}
     </update>
 
-    <update id="updateEnterIndustry">
-        update enter_business_relation
-        set type_id = #{typeId}
-        where enter_id=#{enterId}
-    </update>
+    <!--<update id="updateEnterIndustry">-->
+        <!--update enter_business_relation-->
+        <!--set type_id = #{typeId}-->
+        <!--where enter_id=#{enterId}-->
+    <!--</update>-->
 
 
-    <insert id="insertEnterOtherInfo" parameterType="com.safetyplatform.entity.EnterpriseOtherInfo">
+    <insert id="insertEnterOtherInfo" parameterType="com.safetyplatform.entity.enter_info.EnterpriseOtherInfo">
 
 INSERT INTO enterprise_other_info (enter_id, credit_code, mail_addr, postal_code, build_time, enter_size, cover_area, staff_num, assets_total, register_capital, sale_income, year_revenue, economic_type, legal_person,safe_stand_level)
 VALUES (#{enterId}, #{creditCode}, #{mailAddr}, #{postalCode}, #{buildTime}, #{enterSize}, #{coverArea}, #{staffNum}, #{assetsTotal}, #{registerCapital}, #{saleIncome},
@@ -93,8 +93,12 @@ VALUES (#{enterId}, #{creditCode}, #{mailAddr}, #{postalCode}, #{buildTime}, #{e
         insert into enter_business_relation(enter_id,type_id) values(#{enterId},#{typeId});
     </insert>
 
+    <update id="updateEnterIndustry">
+        update enter_business_relation set enter_id = #{enterId},type_id= #{typeId} where UID = #{ebrId}
+    </update>
 
-    <insert id="insertEnterBaseInfo" parameterType="com.safetyplatform.entity.EnterpriseBaseInfo" useGeneratedKeys="true" keyProperty="enterId">
+
+    <insert id="insertEnterBaseInfo" parameterType="com.safetyplatform.entity.enter_info.EnterpriseBaseInfo" useGeneratedKeys="true" keyProperty="enterId">
 
 
 INSERT INTO enterprise_base_info (gov_id, thirdparty_id, enter_name, longitude, latitude, fatal_danger_source, high_risk_enterprise, danger_chemical_tech, restricted_space, dust_explosion)
@@ -106,7 +110,7 @@ VALUES (#{govId}, #{thirdpartyId}, #{enterName}, #{longitude}, #{latitude}, #{fa
 
         select distinct eoi.*,ebi.danger_chemical_tech,ebi.dust_explosion,
 ebi.fatal_danger_source,ebi.gov_id,ebi.high_risk_enterprise,ebi.latitude,
-ebi.longitude,ebi.enter_name,ebi.restricted_space,ebr.type_id from enterprise_other_info eoi ,
+ebi.longitude,ebi.enter_name,ebi.restricted_space,ebr.type_id,ebr.UID as ebr_id from enterprise_other_info eoi ,
 enterprise_base_info ebi,enter_business_relation ebr
 where eoi.enter_id = ebi.enter_id and ebr.enter_id = eoi.enter_id and eoi.enter_id = #{enterId};
     </select>

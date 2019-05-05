@@ -3,6 +3,7 @@
  * calls Ext.application(). This is the ideal place to handle application launch and
  * initialization details.
  */
+var ctxpath = "/SafetyPlatform";
 Ext.define('SafetyPlatform.Application', {
     extend: 'Ext.app.Application',
 
@@ -66,7 +67,10 @@ Ext.define('SafetyPlatform.Application', {
                         console.log("what",json.restMsg);
                     }
                     Ext.create({
-                        xtype: 'app-main'
+                        xtype: 'app-main',
+                        menus:json.exclusiveMenus,
+                        userName:1,
+                        password:1
                     });
                 },
                 failure: function (response, options) {

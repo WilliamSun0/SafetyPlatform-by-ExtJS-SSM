@@ -1,4 +1,4 @@
-package com.safetyplatform.entity;
+package com.safetyplatform.entity.enter_info;
 
 public class EnterBusiness {
     private int typeId;//节点id

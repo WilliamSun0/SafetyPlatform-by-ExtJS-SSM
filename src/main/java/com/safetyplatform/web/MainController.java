@@ -7,6 +7,7 @@ import com.safetyplatform.entity.Test;
 import com.safetyplatform.service.LoginService;
 import com.safetyplatform.service.MainService;
 import com.safetyplatform.service.RegionTreeService;
+import com.safetyplatform.service.RiskEnterListService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,13 +30,16 @@ public class MainController {
     @Autowired
     private RegionTreeService regionTreeService;
 
+    @Autowired
+    private RiskEnterListService riskEnterListService;
+
     @RequestMapping(value="/getRiskEnterList",
             method=RequestMethod.GET
             )
     @ResponseBody
     public JSONObject getRiskEnterList(){
 
-        return mainService.getRiskEnterList();/*获取风险评级企业列表*/
+        return riskEnterListService.getRiskEnterList();/*获取风险评级企业列表*/
     }
 
     @RequestMapping(value="/test/testtree",

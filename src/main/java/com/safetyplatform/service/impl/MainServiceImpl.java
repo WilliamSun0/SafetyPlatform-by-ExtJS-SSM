@@ -16,29 +16,20 @@ import java.util.List;
 @Service
 public class MainServiceImpl implements MainService {
 
-    @Autowired
-    private RiskEnterGradeDao riskEnterGradeDao;
+
 
     @Autowired
     private HiddenRiskCheckCorrectDao hiddenRiskCheckCorrectDao;
 
-    public JSONObject getRiskEnterList() {
-        JSONObject jsonObject = new JSONObject();
 
-
-        jsonObject.put("data",riskEnterGradeDao.queryAll());
-
-        return jsonObject;
-    }
-
-    public JSONObject test(String regionId) {
-        JSONObject jsonObject = new JSONObject();
-
-
-        jsonObject.put("data",riskEnterGradeDao.queryTest(regionId));
-
-        return jsonObject;
-    }
+//    public JSONObject test(String regionId) {
+//        JSONObject jsonObject = new JSONObject();
+//
+//
+//        jsonObject.put("data",riskEnterGradeDao.queryTest(regionId));
+//
+//        return jsonObject;
+//    }
 
     public JSONObject getHiddenRiskCheckCorrect(String enterId,int start,int limit,String businessType){
         JSONObject jsonObject = new JSONObject();

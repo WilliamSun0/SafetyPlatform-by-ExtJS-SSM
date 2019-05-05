@@ -1,16 +1,11 @@
 package com.safetyplatform.web;
 
-import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.safetyplatform.dao.ManagerDao;
-import com.safetyplatform.dao.RegionTreeDao;
-import com.safetyplatform.entity.EnterBusiness;
-import com.safetyplatform.entity.EnterpriseOtherInfo;
-import com.safetyplatform.entity.RegionTree;
-import com.safetyplatform.entity.ZoneBase;
+import com.safetyplatform.entity.enter_info.EnterBusiness;
+import com.safetyplatform.entity.enter_info.EnterpriseOtherInfo;
+import com.safetyplatform.entity.enter_info.ZoneBase;
 import com.safetyplatform.service.EnterInfoService;
-import com.safetyplatform.service.MainService;
-import com.safetyplatform.service.RegionTreeService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -80,6 +75,16 @@ public class EnterInfoController {
     )
     @ResponseBody
     public List<EnterBusiness> getIndustryList(){
+
+        //这里直接用了dao了，加service一样的
+        return managerDao.getEnterBusinessList();/*获取风险评级企业列表*/
+    }
+
+    @RequestMapping(value="/Enterprise/svTrbl",
+            method=RequestMethod.POST
+    )
+    @ResponseBody
+    public List<EnterBusiness> saveAccident(){
 
         //这里直接用了dao了，加service一样的
         return managerDao.getEnterBusinessList();/*获取风险评级企业列表*/

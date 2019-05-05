@@ -2,7 +2,7 @@
  * 模块数据的主显示区域，继承自Grid
  */
 var pmfile,xffile;
-var ctxpath = $(".ctxpath");
+
 function showFile(file)
 {
 
@@ -48,90 +48,6 @@ function showFile(file)
 
 }
 
-// function saveOneScrtchk(grid,rowindex,imgfl,eid)
-// {
-//     var arr = [];//声明空数组
-//     var store=grid.store;
-//     //疑问？？？？
-//     var rc={};
-//     var uid=store.getAt(rowindex).get('uid');
-//     if (Ext.isEmpty(uid)) {
-//         uid = 0;
-//     }
-//
-//     if(imgfl==null || imgfl.length<32)
-//         imgfl=store.getAt(rowindex).get('imgfl');
-//
-//
-//     $.ajax({
-//         url : ctxpath+'/hcc/saveHiddenCheckImg',
-//         data:{hccRrlationId:uid,imgFile:imgfl,enterId:eid},
-//         dataType : 'json',
-//         contentType:"application/json",
-//         type:'POST',
-//         success:function(data){
-//             //reload(grid.store);
-//             if(data.status==0)
-//             {
-//                 alert(data.msg);
-//                 return ;
-//             }
-//             var record=store.getAt(rowindex);
-//             record.set("status",1);
-//             record.set("imgfl",data.imgfl);
-//             //record.set("ckdtm",);//保存时间
-//             record.set("ckuid","孙唯耀");
-//             record.set("uid",data.uid);
-//             record.commit();
-//         },
-//         error:function(data){
-//             alert('系统错误！');
-//             return 0;
-//         }
-//     });
-// }
-// function saveOneRectify(grid,rowindex,imgfl)
-// {
-//     var arr = [];//声明空数组
-//     var store=grid.store;
-//     var rc={};
-//     var scid=store.getAt(rowindex).get('scid');
-//     if(imgfl==null || imgfl.length<32)
-//         imgfl=store.getAt(rowindex).get('rktimgfl');
-//     if(imgfl!=null && imgfl.length>32)
-//         rc.rktimgfl=imgfl;
-//     else
-//         rc.rktimgfl="";
-//     rc.scid=scid;
-//     arr[0]=rc;
-//     $.ajax({
-//         url : ctxpath+'/Thrd/svRktify',
-//         data:JSON.stringify(arr),
-//         dataType : 'json',
-//         contentType:"application/json",
-//         type:'POST',
-//         success:function(data){
-//             //reload(grid.store);
-//             if(data.stat==0)
-//             {
-//                 alert(data.msg);
-//                 return;
-//             }
-//             //return;
-//             var record=store.getAt(rowindex);
-//             record.set("stat",0);
-//             record.set("rktimgfl",data.imgfl);
-//             record.set("rktdtm",data.rktdtm);
-//             record.set("rktuid",data.username);
-//             record.commit();
-//
-//         },
-//         error:function(data){
-//             alert('系统错误！');
-//             return 0;
-//         }
-//     });
-// }
 
 function initUpload(grid, rowIndex, useType,enterId,uid,riskId, record) {
 

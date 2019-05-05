@@ -72,8 +72,6 @@ Ext.define('SafetyPlatform.view.module.enterinfo.EnterInfoTree', {
     hideHeaders: true,
     width: 250,
     minWidth: 100,
-    split: true,
-    collapsible: true,
 
     viewModel:'module',
 

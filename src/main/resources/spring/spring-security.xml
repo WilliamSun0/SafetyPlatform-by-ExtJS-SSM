@@ -7,7 +7,7 @@
 	http://www.springframework.org/schema/security/spring-security-3.2.xsd">
 
     <http auto-config="true">
-        <intercept-url pattern="/getRiskEnterList" access="ROLE_USER" />
+        <!--<intercept-url pattern="/getRiskEnterList" access="ROLE_USER" />-->
     </http>
 
     <authentication-manager>

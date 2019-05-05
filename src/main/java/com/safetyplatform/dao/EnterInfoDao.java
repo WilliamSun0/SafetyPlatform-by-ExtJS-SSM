@@ -1,8 +1,8 @@
 package com.safetyplatform.dao;
 
-import com.safetyplatform.entity.EnterpriseBaseInfo;
-import com.safetyplatform.entity.EnterpriseOtherInfo;
-import com.safetyplatform.entity.ZoneBase;
+import com.safetyplatform.entity.enter_info.EnterpriseBaseInfo;
+import com.safetyplatform.entity.enter_info.EnterpriseOtherInfo;
+import com.safetyplatform.entity.enter_info.ZoneBase;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

@@ -13,6 +13,12 @@
     <script src="./jquery-3.2.1.js"></script>
     <script src="app/view/module/enterinfo/scrthrt.js"></script>
     <script src="app/view/module/enterinfo/enterprise_graph.js"></script>
+
+    <%--<script src="app/view/module_executelaw/mult_upload.js"></script>--%>
+    <%--<script src="app/view/module_executelaw/showFile.js"></script>--%>
+    <%--<script src="app/view/module_executelaw/super_zfbm.js"></script>--%>
+    <%--<script src="app/view/module_executelaw/super_zfwj.js"></script>--%>
+    <%--<script src="app/view/module_executelaw/ExecuteLaw.js"></script>--%>
     
     <!-- 引入Font Awesome的css文件 -->
 <link type="text/css" rel="stylesheet" href="css/font-awesome.css">
@@ -63,6 +69,6 @@
 </head>
 <body>
 
-<input id="ctxpath" type="hidden" value="${pageContext.request.contextPath}" />
+<%--<input id="ctxpath" type="hidden" value="${pageContext.request.contextPath}" />--%>
 </body>
 </html>

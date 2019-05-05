@@ -1,9 +1,8 @@
 package com.safetyplatform.dao;
 
 import com.safetyplatform.entity.EnterBaseInfo;
-import com.safetyplatform.entity.EnterBusiness;
+import com.safetyplatform.entity.enter_info.EnterBusiness;
 import com.safetyplatform.entity.RegionTree;
-import com.safetyplatform.entity.Test;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
