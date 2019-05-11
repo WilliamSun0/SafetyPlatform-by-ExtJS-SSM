@@ -16,16 +16,7 @@
 
     </resultMap>
 
-    <select id="getExeFiles" resultType="ExecuteLawFile">
 
-        select* from execute_law_file where exe_id = #{exeId};
-    </select>
-
-    <select id="getExeGovList" resultType="ExeGovRelation">
-
-       select rid,exe_id,gov_depart_id,gov_depart_name from gov_depart gd,exe_gov_relation egr where gd.gov_depart_id = egr.gov_depart_id and egr.exe_id = #{exeId};
-
-    </select>
 
     <insert id="insertExeLawList" parameterType="java.util.List">
 
@@ -80,7 +71,7 @@
         </trim>
         where enter_id in
         <foreach collection="list" index="index" item="item" separator=",">
-            enter_id = #{item.enterId,jdbcType=INT}
+            #{item.enterId,jdbcType=INT}
         </foreach>
     </update>
 

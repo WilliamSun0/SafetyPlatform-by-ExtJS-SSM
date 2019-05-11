@@ -36,6 +36,8 @@ public class LoginController {
         menus.add(3);
         menus.add(4);
         menus.add(2);
+        menus.add(1);
+        menus.add(0);
 
 
         jsonObject.put("success", true);

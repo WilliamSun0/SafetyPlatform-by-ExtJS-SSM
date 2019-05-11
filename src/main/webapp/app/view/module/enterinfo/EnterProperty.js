@@ -193,13 +193,13 @@ function initpanel(tid,eid,judge) {
                                 name: 'latitude',
                                 width: '50%'
                             },
-                            // {
-                            //     xtype: 'datefield',
-                            //     fieldLabel: '成立时间',
-                            //     name: 'buildTime',
-                            //     width: '50%',
-                            //     format:'Y-M-D'
-                            // }
+                            {
+                                xtype: 'datefield',
+                                fieldLabel: '成立时间',
+                                name: 'buildTime',
+                                width: '50%',
+                                format : 'Y-m-d'
+                            }
                         ]
                 },
                 {

@@ -3,59 +3,7 @@
  *
  *
  */
-// var store = Ext.create('Ext.data.JsonStore', {
-//     fields: ['uid',
-//         'enterId',
-//         'creditCode',
-//         'mailAddr',
-//         'postalCode',
-//         'buildTime',
-//         'enterSize',
-//         'coverArea',
-//         'staffNum',
-//         'assetsTotal',
-//         'registerCapital',
-//         'saleIncome',
-//         'yearRevenue',
-//         'economicType',
-//         // 'legalPerson',
-//         // 'workTitle',
-//         // 'officeCall',
-//         // 'legalPersonMobile',
-//         // 'belongIndustry',
-//         // 'contactPerson',
-//         // 'contactMobile',
-//         // 'belongGroup',
-//         // 'safeManageDept',
-//         // 'mainProcess',
-//         // 'processLevel',
-//         // 'mainMaterial',
-//         // 'proHarmTest',
-//         // 'proHarm',
-//         // 'bodyHealth',
-//
-//         'znid',
-//         'enterName',
-//         'longitude',
-//         'latitude',
-//         'typeId'
-//     ],
-//     proxy: {
-//         type: 'ajax',
-//         url: '/SafetyPlatform/enterInfo/getEnterpriseByEid',
-//         reader: {
-//             type: 'json'
-//         }
-//     },
-//     listeners: {
-//         'beforeload': function (store, op, options) {
-//             var params = {eid: 1};
-//             Ext.apply(store.proxy.extraParams, params);
-//         }
-//     },
-//
-//
-// });
+
 
 
 Ext.define('SafetyPlatform.view.module.enterinfo.EnterInfoTree', {
@@ -84,36 +32,12 @@ Ext.define('SafetyPlatform.view.module.enterinfo.EnterInfoTree', {
         'SafetyPlatform.view.module.region.HiddenCheckGrid',
     ],
 
-    //viewModel:'module',
 
-    //为View关联上Store
     //改为通过controllerinitstore文件
     store:Ext.create('SafetyPlatform.store.hiddencheckcorrect.HiddenCheckCorrectTreeStore', {
         storeId: "hckts"
     }),
 
-
-    // listeners:{
-    //     //如果项被点击的话
-    //     itemclick:function(view,record,item) {
-    //         //var maincenter = this.getView().up('maincenter');
-    //
-    //         var maincenter = Ext.getCmp('x');
-    //         maincenter.add({
-    //
-    //             xtype : 'hccg',
-    //             closable : false,
-    //             reorderable : true,
-    //
-    //             //admId:record.data.admId
-    //
-    //         });
-    //
-    //         console.log('onhccgClick');
-    //
-    //     }
-    //
-    // },
     initComponent:function () {
 	    var me = this;
 	    var townId;
@@ -217,6 +141,8 @@ Ext.define('SafetyPlatform.view.module.enterinfo.EnterInfoTree', {
                             hcctab.setActiveTab(hcctab.add(grid));
 
                         hcctab.add(showGraph(enterId,1));
+                        hcctab.add(initEnterInfofds(enterId));
+                        hcctab.add(initdc(enterId));
                         hcctab.add(initScrthrt(enterId));
                     }
 

@@ -17,19 +17,21 @@
 
     <select id="getTotalNumHRCCL" resultType="int">
     select count(*) from enter_hidden_relation  right join zyjk on zyjk.risk_id = enter_hidden_relation.risk_id and enter_hidden_relation.enter_id = #{enterId}
+        and status = #{status}
         <if test="businessType != 'other'">
             where  zyjk.main_object like CONCAT('%',#{businessType})
         </if>
 
     </select>
 
-    <select id="getHiddenRiskCheckCorrectList" resultType="HiddenRiskCheckCorrect">
-        select * from enter_hidden_relation  right join zyjk on zyjk.risk_id = enter_hidden_relation.risk_id and enter_hidden_relation.enter_id = #{enterId}
-
+    <select id="getHiddenRiskCheckCorrectList" resultMap="HRCCTemp">
+        select zyjk.*,ehr.enter_id,ehr.status,ehr.uid,ehr.check_img,ehr.check_man,ehr.check_time,ehr.correct_man,ehr.correct_time from enter_hidden_relation ehr  right join zyjk on zyjk.risk_id = ehr.risk_id and ehr.enter_id = #{enterId}
+and status = #{status}
         <if test="businessType != 'other'">
-            where  zyjk.main_object like CONCAT('%',#{businessType})
+           where zyjk.main_object like CONCAT('%',#{businessType})
         </if>
         limit #{start},#{limit};
+
     </select>
 
     <update id="updateHiddenRiskCheck">
@@ -44,14 +46,38 @@
         VALUES (#{enterId},#{riskId},#{filePath})
     </insert>
 
+    <insert id="insertHiddenRiskCheckNoFile">
+        INSERT ignore INTO enter_hidden_relation(enter_id,risk_id,check_man,status,check_time)
+        VALUES (#{enterId},#{riskId},#{checkMan},#{status},#{checkTime});
+    </insert>
+
+    <update id="updateHiddenRiskCorrectNoFile">
+        update enter_hidden_relation
+        <trim prefix="set" suffixOverrides=",">
+
+            <if test="correctMan != null">correct_man=#{correctMan},</if>
+            <if test="correctTime != null">correct_time=#{correctTime},</if>
+            <if test="status != null">status=#{status},</if>
+
+        </trim>
+        where uid=#{uid}
+    </update>
 
 
-    <resultMap id="RegionTreeTemp" type="RegionTree">
 
-        <result column="leaf" property="leaf" jdbcType="TINYINT" javaType="Boolean" />
+    <resultMap id="HRCCTemp" type="HiddenRiskCheckCorrect">
+
+        <result column="status" property="status" jdbcType="TINYINT" javaType="Boolean" />
 
     </resultMap>
 
+
+    <!--<select id="getEnterMainTypeNum" resultType="com.safetyplatform.entity.risk_index.RiskEvaluateResult">-->
+        <!--SELECT danger_level_num,count(*) as result-->
+        <!--FROM enter_hidden_relation ehr ,zyjk-->
+        <!--where ehr.risk_id = zyjk.risk_id and ehr.enter_id = #{enterId} and ehr.status = 1-->
+        <!--group by danger_level_num order by danger_level_num asc;-->
+    <!--</select>-->
 
 
 </mapper>

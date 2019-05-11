@@ -83,7 +83,8 @@ public class RegionTreeServiceImpl implements RegionTreeService {
                             business.setType(6);
                             business.setLeaf(false);
 
-                            if (eb.getTypeId() == 1) {
+                            //
+                            if (eb.getTypeId() != 0) {
                                 object.setRegionUrl("zyjk");
                                 object.setText("职业健康");
                                 object.setType(7);
@@ -113,6 +114,8 @@ public class RegionTreeServiceImpl implements RegionTreeService {
 
                                 business.setChildren(objectList);
                             }
+
+
                             businessList.add(business);
 
                         }

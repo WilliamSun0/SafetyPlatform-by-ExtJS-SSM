@@ -1,12 +1,13 @@
 package com.safetyplatform.entity;
 
+import java.sql.Date;
 import java.util.List;
 
 public class HiddenRiskCheckCorrect {
 
 
-    private String checkMan;//节点id
-    private String correctMan;//节点名称
+    private int checkMan;//节点id
+    private int correctMan;//节点名称
     private String partObject;//隐患名
     private String mainType;//节点点击的请求路径
     private String riskDescription;//节点的图标，folder还是file
@@ -17,6 +18,18 @@ public class HiddenRiskCheckCorrect {
     private int uid;
     private int riskId;
     private String checkImg;
+    private String correctImg;
+    private boolean status;
+    private Date checkTime;
+    private Date correctTime;
+
+    public String getCorrectImg() {
+        return correctImg;
+    }
+
+    public void setCorrectImg(String correctImg) {
+        this.correctImg = correctImg;
+    }
 
     public String getCheckImg() {
         return checkImg;
@@ -42,19 +55,19 @@ public class HiddenRiskCheckCorrect {
         this.uid = uid;
     }
 
-    public String getCheckMan() {
+    public int getCheckMan() {
         return checkMan;
     }
 
-    public void setCheckMan(String checkMan) {
+    public void setCheckMan(int checkMan) {
         this.checkMan = checkMan;
     }
 
-    public String getCorrectMan() {
+    public int getCorrectMan() {
         return correctMan;
     }
 
-    public void setCorrectMan(String correctMan) {
+    public void setCorrectMan(int correctMan) {
         this.correctMan = correctMan;
     }
 
@@ -115,4 +128,27 @@ public class HiddenRiskCheckCorrect {
     }
 
 
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+
+    public Date getCheckTime() {
+        return checkTime;
+    }
+
+    public void setCheckTime(Date checkTime) {
+        this.checkTime = checkTime;
+    }
+
+    public Date getCorrectTime() {
+        return correctTime;
+    }
+
+    public void setCorrectTime(Date correctTime) {
+        this.correctTime = correctTime;
+    }
 }

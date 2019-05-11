@@ -2,10 +2,10 @@ function initScrthrt(eid)
 {
 	var trblStore = new Ext.data.JsonStore( {
 		singleton : true, 
-		fields : ['tid', 'eid', 'trbl', 'dtm'],
+		fields : ['accId','accType','accTime','enterId'],
 		proxy: {
 			type: 'ajax',
-			url:ctxpath+'/Enterprise/getTrblByEid'			
+			url:ctxpath+'/Enterprise/getEnterAccByEid'
 		},		
 		listeners: {  
 	        'beforeload': function (store, op, options) {  
@@ -32,7 +32,9 @@ function initScrthrt(eid)
 				[15, '财产损失-较大以上损失：10000-100001元' ] 
 			] 
     }); 
-	var trblGrid = new Ext.grid.GridPanel({ 	    
+	var trblGrid = new Ext.grid.GridPanel({
+
+	title:'企业事故',
 	    width: "100%",  
 	    height: '100%',  	    
 	    frame: true,  
@@ -63,18 +65,18 @@ function initScrthrt(eid)
 	    	}, 
 	        {  
 	        	xtype : 'hidden',
-				name : 'tid',
-				dataIndex:"tid" 
+				name : 'accId',
+				dataIndex:"accId"
 	        }, 
 	        {  
 	        	xtype : 'hidden',
-				name : 'eid',
-				dataIndex:"eid"
+				name : 'enterId',
+				dataIndex:"enterId"
 	        }, 
 	        {  
 	            header:'<div style="text-align:center">事故类型</div>',
 	            width:"50%",  
-	            dataIndex:"trbl", 
+	            dataIndex:"accType",
 	            editor: new Ext.form.ComboBox({  
 	                editable: false,  
 	                displayField: "text",
@@ -96,7 +98,8 @@ function initScrthrt(eid)
 	            width:"30%",  
 	            //xtype : 'datefield',
 	            //format: "Y年m月d日",
-	            dataIndex:"dtm"
+	            dataIndex:"accTime",
+                editor:{ xtype: 'datefield', format : 'Y-m-d'}
 	        },
 			{
 	            xtype:'actioncolumn',
@@ -105,23 +108,23 @@ function initScrthrt(eid)
 	            width:"12%",	                   
 	            items: [
 	            {
-	                icon: '../pagesExt/images/del.png',  // Use a URL in the icon config	                
+                    glyph:0xf056,  // Use a URL in the icon config
 	                tooltip: '删除',
 	                handler: function(grid, rowIndex, colIndex) 
 	                {
 	                	if(confirm('你确定要删除该记录吗？')==0)
 	                		return;
 	                	var rec = grid.getStore().getAt(rowIndex);
-		                var tid=rec.get('tid');
+		                var tid=rec.get('accId');
 		                $.ajax({
 	                    	type : "post",
 	                		async:false,
-	                	 	url : ctxpath+'/Enterprise/deleteTrblByTid',
-	                	 	data:{tid:tid}, 
+	                	 	url : ctxpath+'/Enterprise/deleteEnterAccByAccId',
+	                	 	data:{accId:tid},
 	                	 	dataType : 'json',
 		            		success:function(data){ 
 		            			trblStore.load();	  
-		            			//alert('保存信息成功！');
+		            			alert('保存信息成功！');
 		            		},
 		            		error:function(data){
 		                    	MsgBox('删除失败！');
@@ -137,13 +140,14 @@ function initScrthrt(eid)
 	    tbar: [ 
 	    	 
 	        {
-                glyph: 0xf0fe,  // Use a URL in the icon config
+                glyph: 0xf0fe,
                 tooltip: '增加',
 	            handler: function(){
 	            	var p = new Ext.data.Record({                 
-		            tid:'',
-		            eid:eid,
-		            trbl:0		            
+		            accId:0,
+		            enterId:eid,
+		            accType:0,
+						accTime:null//默认为空即可
 		            }); 
 	            	trblStore.insert(trblStore.getCount(), p);	
 	                  
@@ -159,7 +163,7 @@ function initScrthrt(eid)
 	            		arr.push(record.data);
 	            	});
 	            	$.ajax({
-	            		url : '/SafetyPlatform/Enterprise/svTrbl',
+	            		url : ctxpath+'/Enterprise/svEnterAccList',
 	            		data:JSON.stringify(arr),
 	            		dataType : 'json',
 	            		contentType:"application/json", 

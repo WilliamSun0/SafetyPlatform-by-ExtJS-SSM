@@ -2,7 +2,7 @@ package com.safetyplatform.web;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.safetyplatform.dao.EnterInfoDao;
+import com.safetyplatform.dao.EnterOtherInfoDao;
 import com.safetyplatform.dao.HiddenRiskCheckCorrectDao;
 import com.safetyplatform.entity.enter_info.EnterpriseOtherInfo;
 import org.apache.commons.io.FileUtils;
@@ -29,7 +29,7 @@ public class UploadController {
     @Autowired
     private HiddenRiskCheckCorrectDao hiddenRiskCheckCorrectDao;
     @Autowired
-    private EnterInfoDao enterInfoDao;
+    private EnterOtherInfoDao enterOtherInfoDao;
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     //上传文件会自动绑定到MultipartFile中
@@ -57,7 +57,7 @@ public class UploadController {
         enterpriseOtherInfo.setEnterId(Long.parseLong(enterId));
         System.out.println(enterId);
         enterpriseOtherInfo.setPlaneImg(mypath+filename);
-        enterInfoDao.updateEnterOtherInfo(enterpriseOtherInfo);
+        enterOtherInfoDao.updateEnterOtherInfo(enterpriseOtherInfo);
 
         if (useType.equals("check")) {
 
@@ -74,12 +74,12 @@ public class UploadController {
             mypath = "/images/"+enterId+"/";
             filename ="平面图像.jpg";
             enterpriseOtherInfo.setPlaneImg(mypath+filename);
-            enterInfoDao.updateEnterOtherInfo(enterpriseOtherInfo);
+            enterOtherInfoDao.updateEnterOtherInfo(enterpriseOtherInfo);
         }else if (useType.equals("fire")){
             mypath = "/images/"+enterId+"/";
             filename ="消防图像.jpg";
             enterpriseOtherInfo.setFireImg(mypath+filename);
-            enterInfoDao.updateEnterOtherInfo(enterpriseOtherInfo);
+            enterOtherInfoDao.updateEnterOtherInfo(enterpriseOtherInfo);
         }
 
 //如果文件不为空，写入上传路径

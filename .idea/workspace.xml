@@ -7,91 +7,131 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f85b04f-1d92-4a10-9eeb-14009bf8c78f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/dao/ExecuteLawDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/dao/ExecuteLawGovFileDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/entity/risk_index/RiskIndexA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/risk_index/RiskIndex.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/service/ExecuteLawGovFielService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/service/ExecuteLawService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/service/RiskEnterListService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/service/impl/ExecuteLawGovFielServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/service/impl/ExecuteLawServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/service/impl/RiskEnterListServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/web/ExecuteLawController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/web/ExecuteLawGovFileController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/ExecuteLawDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/ExecuteLawGovFileDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/app/view/module_executelaw/ExecuteLaw.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/app/view/module_executelaw/ExecuteLawTree.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/app/view/module_executelaw/mult_upload.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/app/view/module_executelaw/showFile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/app/view/module_executelaw/super_zfbm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/app/view/module_executelaw/super_zfwj.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/dao/EnterFatalSafeInfoDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/dao/HRLevelNumDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/dao/HRLevelNumDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/entity/EchartsData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/entity/risk_index/RiskEvaluateResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/service/OverviewTreeService/OverviewTreeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/service/OverviewTreeService/OverviewTreeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/service/RegionRiskChartService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/service/impl/RegionRiskChartServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/web/EnterFatalSafeInfoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/web/RiskChartController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/EnterOtherInfoDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/HRLevelNumDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/app/view/module/enterinfo/DangerChemical.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/app/view/module/enterinfo/FatalDangerSource.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/app/view/module_regionchart/RegionChartTree.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/app/view/module_regionchart/eChartPanel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/echarts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/safetyplatform/dao/EnterInfoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/dao/EnterInfoDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/safetyplatform/dao/ManagerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/dao/ManagerDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/safetyplatform/dao/EnterInfoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/dao/EnterOtherInfoDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/safetyplatform/dao/ExecuteLawDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/dao/ExecuteLawDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/safetyplatform/dao/HiddenRiskCheckCorrectDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/dao/HiddenRiskCheckCorrectDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/safetyplatform/dao/RegionTreeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/dao/RegionTreeDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/safetyplatform/dao/RiskEnterGradeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/dao/RiskEnterGradeDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/safetyplatform/entity/EnterBusiness.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/entity/enter_info/EnterBusiness.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/safetyplatform/entity/EnterpriseBaseInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/entity/enter_info/EnterpriseBaseInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/safetyplatform/entity/EnterpriseOtherInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/entity/enter_info/EnterpriseOtherInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/safetyplatform/entity/RiskEnterGrade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/entity/RiskEnterGrade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/safetyplatform/entity/ZoneBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/entity/enter_info/ZoneBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/safetyplatform/service/EnterInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/service/EnterInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/safetyplatform/entity/HiddenRiskCheckCorrect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/entity/HiddenRiskCheckCorrect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/safetyplatform/entity/RiskEnterGrade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/entity/risk_index/RiskEnterGrade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/safetyplatform/risk_index/RiskIndex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/risk_index/RiskIndex.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/safetyplatform/service/MainService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/service/MainService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/safetyplatform/service/impl/EnterInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/service/impl/EnterInfoServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/safetyplatform/service/impl/MainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/service/impl/MainServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/safetyplatform/service/impl/RegionTreeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/service/impl/RegionTreeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/safetyplatform/service/impl/RiskEnterListServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/service/impl/RiskEnterListServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/safetyplatform/web/EnterInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/web/EnterInfoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/safetyplatform/web/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/web/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/safetyplatform/web/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/web/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/safetyplatform/web/UploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/safetyplatform/web/UploadController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/EnterInfoDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/EnterInfoDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/EnterInfoDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/EnterFatalSafeInfoDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ExecuteLawDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ExecuteLawDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/HiddenRiskCheckCorrectDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/HiddenRiskCheckCorrectDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/RegionTreeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/RegionTreeDao.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/RiskEnterGradeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/RiskEnterGradeDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/SuccessKilledDao.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-dao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-dao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-security.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-security.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/app/Application.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/Application.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/app/controller/login/LoginController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/controller/login/LoginController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/app/model/riskcomlist/RiskComListModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/model/riskcomlist/RiskComListModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/app/store/hiddencheckcorrect/HiddenCheckCorrectGridStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/store/hiddencheckcorrect/HiddenCheckCorrectGridStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/app/store/hiddencheckcorrect/HiddenCheckCorrectTreeStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/store/hiddencheckcorrect/HiddenCheckCorrectTreeStore.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/app/view/main/MainController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/view/main/MainController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/app/view/main/region/Top.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/view/main/region/Top.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/app/view/module/Module.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/view/module/Module.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/app/view/module/enterinfo/EnterInfoTree.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/view/module/enterinfo/EnterInfoTree.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/app/view/module/enterinfo/EnterProperty.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/view/module/enterinfo/EnterProperty.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/app/view/module/enterinfo/scrthrt.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/view/module/enterinfo/scrthrt.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/app/view/module/region/HiddenCheckCorrectGrid.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/view/module/region/HiddenCheckCorrectGrid.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/app/view/module/region/HiddenCheckGrid.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/view/module/region/HiddenCheckGrid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/app/view/module_risklist/GridRiskComList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/view/module_risklist/GridRiskComList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ext/build/ext-all-debug.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ext/build/ext-all-debug.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ext/build/ext-all-rtl-debug.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ext/build/ext-all-rtl-debug.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ext/build/ext-all-rtl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ext/build/ext-all-rtl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ext/build/ext-all.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ext/build/ext-all.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ext/build/ext-debug.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ext/build/ext-debug.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ext/build/ext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ext/build/ext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ext/classic/theme-aria/sass/example/bootstrap.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ext/classic/theme-aria/sass/example/bootstrap.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ext/classic/theme-aria/sass/example/bootstrap.jsonp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ext/classic/theme-aria/sass/example/bootstrap.jsonp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ext/classic/theme-classic-sandbox/sass/example/bootstrap.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ext/classic/theme-classic-sandbox/sass/example/bootstrap.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ext/classic/theme-classic-sandbox/sass/example/bootstrap.jsonp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ext/classic/theme-classic-sandbox/sass/example/bootstrap.jsonp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ext/classic/theme-classic/sass/example/bootstrap.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ext/classic/theme-classic/sass/example/bootstrap.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ext/classic/theme-classic/sass/example/bootstrap.jsonp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ext/classic/theme-classic/sass/example/bootstrap.jsonp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ext/packages/charts/sass/example/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ext/packages/charts/sass/example/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ext/packages/charts/sass/example/bootstrap.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ext/packages/charts/sass/example/bootstrap.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ext/packages/charts/sass/example/bootstrap.jsonp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ext/packages/charts/sass/example/bootstrap.jsonp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/WEB-INF/classes/com/safetyplatform/dao/HiddenRiskCheckCorrectDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/WEB-INF/classes/com/safetyplatform/dao/HiddenRiskCheckCorrectDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/WEB-INF/classes/com/safetyplatform/dao/RegionTreeDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/WEB-INF/classes/com/safetyplatform/dao/RegionTreeDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/WEB-INF/classes/com/safetyplatform/dao/RiskEnterGradeDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/WEB-INF/classes/com/safetyplatform/dao/RiskEnterGradeDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/WEB-INF/classes/com/safetyplatform/entity/RiskEnterGrade.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/WEB-INF/classes/com/safetyplatform/entity/RiskEnterGrade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/WEB-INF/classes/com/safetyplatform/entity/EnterBusiness.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/WEB-INF/classes/com/safetyplatform/entity/HiddenRiskCheckCorrect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/WEB-INF/classes/com/safetyplatform/entity/HiddenRiskCheckCorrect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/WEB-INF/classes/com/safetyplatform/entity/RiskEnterGrade.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/WEB-INF/classes/com/safetyplatform/service/MainService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/WEB-INF/classes/com/safetyplatform/service/MainService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/WEB-INF/classes/com/safetyplatform/service/impl/MainServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/WEB-INF/classes/com/safetyplatform/service/impl/MainServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/WEB-INF/classes/com/safetyplatform/service/impl/RegionTreeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/WEB-INF/classes/com/safetyplatform/service/impl/RegionTreeServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/WEB-INF/classes/com/safetyplatform/web/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/WEB-INF/classes/com/safetyplatform/web/LoginController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/WEB-INF/classes/com/safetyplatform/web/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/WEB-INF/classes/com/safetyplatform/web/MainController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/WEB-INF/classes/com/safetyplatform/web/UploadController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/WEB-INF/classes/com/safetyplatform/web/UploadController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/WEB-INF/classes/mapper/HiddenRiskCheckCorrectDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/WEB-INF/classes/mapper/HiddenRiskCheckCorrectDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/WEB-INF/classes/mapper/RegionTreeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/WEB-INF/classes/mapper/RegionTreeDao.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/WEB-INF/classes/mapper/RiskEnterGradeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/WEB-INF/classes/mapper/RiskEnterGradeDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/WEB-INF/classes/mapper/SuccessKilledDao.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/app/Application.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/app/Application.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/app/controller/login/LoginController.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/app/controller/login/LoginController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/app/model/riskcomlist/RiskComListModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/app/model/riskcomlist/RiskComListModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/app/store/hiddencheckcorrect/HiddenCheckCorrectGridStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/app/store/hiddencheckcorrect/HiddenCheckCorrectGridStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/app/store/hiddencheckcorrect/HiddenCheckCorrectTreeStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/app/store/hiddencheckcorrect/HiddenCheckCorrectTreeStore.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/app/view/main/MainController.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/app/view/main/MainController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/app/view/main/region/Top.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/app/view/main/region/Top.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/app/view/module/Module.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/app/view/module/Module.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/app/view/module/enterinfo/EnterProperty.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/app/view/module/enterinfo/EnterProperty.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/app/view/module/region/HiddenCheckCorrectGrid.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/app/view/module/region/HiddenCheckCorrectGrid.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/app/view/module/region/HiddenCheckGrid.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/app/view/module/region/HiddenCheckGrid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/app/view/module_risklist/GridRiskComList.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/app/view/module_risklist/GridRiskComList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/ext/build/ext-all-debug.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/ext/build/ext-all-debug.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/ext/build/ext-all-rtl-debug.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/ext/build/ext-all-rtl-debug.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/ext/build/ext-all-rtl.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/ext/build/ext-all-rtl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/ext/build/ext-all.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/ext/build/ext-all.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/ext/build/ext-debug.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/ext/build/ext-debug.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/ext/build/ext.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/ext/build/ext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/ext/classic/theme-aria/sass/example/bootstrap.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/ext/classic/theme-aria/sass/example/bootstrap.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/ext/classic/theme-aria/sass/example/bootstrap.jsonp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/ext/classic/theme-aria/sass/example/bootstrap.jsonp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/ext/classic/theme-classic-sandbox/sass/example/bootstrap.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/ext/classic/theme-classic-sandbox/sass/example/bootstrap.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/ext/classic/theme-classic-sandbox/sass/example/bootstrap.jsonp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/ext/classic/theme-classic-sandbox/sass/example/bootstrap.jsonp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/ext/classic/theme-classic/sass/example/bootstrap.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/ext/classic/theme-classic/sass/example/bootstrap.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/ext/classic/theme-classic/sass/example/bootstrap.jsonp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/ext/classic/theme-classic/sass/example/bootstrap.jsonp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/ext/packages/charts/sass/example/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/ext/packages/charts/sass/example/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/ext/packages/charts/sass/example/bootstrap.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/ext/packages/charts/sass/example/bootstrap.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/ext/packages/charts/sass/example/bootstrap.jsonp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/ext/packages/charts/sass/example/bootstrap.jsonp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SafetyPlatform/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SafetyPlatform/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/safetyplatform/dao/HiddenRiskCheckCorrectDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/safetyplatform/dao/HiddenRiskCheckCorrectDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/safetyplatform/dao/RegionTreeDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/safetyplatform/dao/RegionTreeDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/safetyplatform/dao/RiskEnterGradeDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/safetyplatform/dao/RiskEnterGradeDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/safetyplatform/entity/RiskEnterGrade.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/safetyplatform/entity/RiskEnterGrade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/safetyplatform/entity/EnterBusiness.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/safetyplatform/entity/HiddenRiskCheckCorrect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/safetyplatform/entity/HiddenRiskCheckCorrect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/safetyplatform/entity/RiskEnterGrade.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/safetyplatform/service/MainService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/safetyplatform/service/MainService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/safetyplatform/service/impl/MainServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/safetyplatform/service/impl/MainServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/safetyplatform/service/impl/RegionTreeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/safetyplatform/service/impl/RegionTreeServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/safetyplatform/web/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/safetyplatform/web/LoginController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/safetyplatform/web/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/safetyplatform/web/MainController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/safetyplatform/web/UploadController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/safetyplatform/web/UploadController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/HiddenRiskCheckCorrectDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/HiddenRiskCheckCorrectDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/RegionTreeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/RegionTreeDao.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapper/RiskEnterGradeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/RiskEnterGradeDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/SuccessKilledDao.xml" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -134,18 +174,120 @@
         <item name="risk_manage@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="risk_manage: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="fatal_danger_source: table" type="98d5ac3d:MysqlImplModel$Table" />
+        <item name="danger_chemical_tech: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="risk_manage@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="risk_manage: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="enter_hidden_relation: table" type="98d5ac3d:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GridRiskComList.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/app/view/module_risklist/GridRiskComList.js">
+      <file leaf-file-name="HiddenCheckCorrectGrid.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/app/view/module/region/HiddenCheckCorrectGrid.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2210">
+              <caret line="130" column="79" selection-start-line="130" selection-start-column="79" selection-end-line="130" selection-end-column="79" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegionChartTree.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/app/view/module_regionchart/RegionChartTree.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="952">
+              <caret line="56" column="37" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HiddenRiskCheckCorrectDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/dao/HiddenRiskCheckCorrectDao.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+              <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/service/impl/MainServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/web/MainController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="358">
+              <caret line="112" column="50" selection-start-line="112" selection-start-column="50" selection-end-line="112" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HiddenCheckCorrectGridStore.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/app/store/hiddencheckcorrect/HiddenCheckCorrectGridStore.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HiddenCheckGrid.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/app/view/module/region/HiddenCheckGrid.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3876">
+              <caret line="228" column="17" selection-start-line="228" selection-start-column="17" selection-end-line="228" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RiskChartController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/web/RiskChartController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HiddenRiskCheckCorrectDao.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/HiddenRiskCheckCorrectDao.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HiddenRiskCheckCorrect.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/entity/HiddenRiskCheckCorrect.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2974#2975#0" expanded="true" />
+                <element signature="e#3006#3007#0" expanded="true" />
+                <element signature="e#3054#3055#0" expanded="true" />
+                <element signature="e#3096#3097#0" expanded="true" />
+                <element signature="e#3132#3133#0" expanded="true" />
+                <element signature="e#3166#3167#0" expanded="true" />
+                <element signature="e#3218#3219#0" expanded="true" />
+                <element signature="e#3264#3265#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -157,10 +299,10 @@
       <list>
         <option value="AnnotationType" />
         <option value="Jsp File" />
-        <option value="JavaScript File" />
         <option value="spring-beans.schema" />
         <option value="FxmlFile" />
         <option value="Tag Library Descriptor" />
+        <option value="JavaScript File" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -168,18 +310,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>new</find>
-      <find>add</find>
-      <find>return</find>
-      <find>请先</find>
-      <find>minus</find>
-      <find>tba</find>
-      <find>ext-</find>
-      <find>rootP</find>
-      <find>exeFile</find>
-      <find>delete</find>
-      <find>error</find>
-      <find>same</find>
       <find>entstore</find>
       <find>show</find>
       <find>images</find>
@@ -190,7 +320,6 @@
       <find>.up</find>
       <find>scroll</find>
       <find>ctxpath</find>
-      <find>sv</find>
       <find>sid</find>
       <find>addListener</find>
       <find>Listener</find>
@@ -198,6 +327,19 @@
       <find>trbl</find>
       <find>table</find>
       <find>driverClass</find>
+      <find>edi</find>
+      <find>时间</find>
+      <find>saveExecuteLawReport</find>
+      <find>getEnterAccList</find>
+      <find>delete</find>
+      <find>msg</find>
+      <find>hide</find>
+      <find>JdbcType</find>
+      <find>items</find>
+      <find>/hrcc/svHRCC</find>
+      <find>Date</find>
+      <find>sv</find>
+      <find>store</find>
     </findStrings>
     <replaceStrings>
       <replace>RegionTree</replace>
@@ -218,57 +360,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/web/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/app.json" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/EnterInfoDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/EnterOtherInfoDao.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/app/view/module/enterinfo/EnterInfoTree.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/dao/Dao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/entity/GovDepart.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/app/view/module_executelaw/super_zfwj.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/entity/ExeGovRelation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/entity/ExecuteLawFile.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/app/view/module/Module.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/app/view/module/region/HiddenCheckCorrectGrid.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/app/store/executelaw/ExecuteLawListStore.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/app/view/module_executelaw/ExecuteLawList.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/app/view/main/MainController.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/app/view/module_executelaw/super_zfbm.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/service/ExecuteLawService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring/spring-security.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/app/view/module_executelaw/ExecuteLaw.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/entity/ExecuteLaw.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/service/impl/ExecuteLawServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/app/Application.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/entity/executelaw/ExeGovRelation.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/ExecuteLawDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/web/ExecuteLawController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/service/ExecuteLawGovFielService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/web/ExecuteLawGovFileController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/app/view/module/region/HiddenCheckGrid.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/web/UploadController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/service/impl/ExecuteLawGovFielServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/ExecuteLawGovFileDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/app/view/module_executelaw/ExecuteLawTree.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/entity/RiskEnterGrade.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/dao/ExecuteLawDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/dao/ExecuteLawGovFileDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/service/MainService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/service/impl/MainServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/web/MainController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/service/RiskEnterListService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/entity/risk_index/RiskIndexA.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/risk_index/RiskIndex.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/dao/EnterFatalSafeInfoDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/web/EnterFatalSafeInfoController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/view/module/enterinfo/EnterProperty.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/dao/EnterOtherInfoDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/service/impl/EnterInfoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/view/module/enterinfo/DangerChemical.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/view/module/enterinfo/FatalDangerSource.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/EnterFatalSafeInfoDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/entity/risk_index/RiskEnterGrade.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/model/riskcomlist/RiskComListModel.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/dao/RiskEnterGradeDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/dao/HRNumDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/dao/RiskEnterGradeDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/entity/risk_index/RiskEvaluateResult.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/dao/HRLevelNumDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/dao/HRLevelNumDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/HRLevelNumDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/risk_index/RiskIndex.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/service/OverviewTreeService/OverviewTreeService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/RegionTreeDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/dao/RegionTreeDao.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/view/main/MainController.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/store/hiddencheckcorrect/HiddenCheckCorrectTreeStore.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/view/module/Module.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/web/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/echarts.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/service/OverviewTreeService/OverviewTreeServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/view/module_regionchart/eChartPanel.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/view/module_executelaw/ExecuteLawTree.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/entity/EchartsData.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/service/impl/RiskEnterListServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/RiskEnterGradeDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/app/view/module/enterinfo/EnterProperty.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/entity/EnterpriseOtherInfo.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/EnterInfoDao.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring/spring-dao.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mybatis-generator-config.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/jdbc.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/service/impl/RegionRiskChartServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/service/RegionRiskChartService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/web/RiskChartController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/view/module_risklist/GridRiskComList.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/service/impl/RegionTreeServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/entity/HiddenRiskCheckCorrect.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/service/impl/MainServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/dao/HiddenRiskCheckCorrectDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/service/MainService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/view/module_regionchart/RegionChartTree.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/view/module/region/HiddenCheckCorrectGrid.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/store/hiddencheckcorrect/HiddenCheckCorrectGridStore.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/HiddenRiskCheckCorrectDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/view/module/region/HiddenCheckGrid.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/safetyplatform/web/MainController.java" />
       </list>
     </option>
   </component>
@@ -391,6 +533,77 @@
               <item name="SafetyPlatform" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SafetyPlatform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SafetyPlatform" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="safetyplatform" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SafetyPlatform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SafetyPlatform" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="safetyplatform" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SafetyPlatform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SafetyPlatform" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="safetyplatform" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SafetyPlatform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SafetyPlatform" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="safetyplatform" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+              <item name="risk_index" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SafetyPlatform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SafetyPlatform" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="safetyplatform" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SafetyPlatform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SafetyPlatform" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="safetyplatform" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SafetyPlatform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SafetyPlatform" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="safetyplatform" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SafetyPlatform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SafetyPlatform" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -406,14 +619,6 @@
               <item name="SafetyPlatform" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="spring" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SafetyPlatform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SafetyPlatform" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -432,6 +637,78 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SafetyPlatform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SafetyPlatform" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SafetyPlatform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SafetyPlatform" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="region" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SafetyPlatform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SafetyPlatform" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="module" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SafetyPlatform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SafetyPlatform" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="module" type="462c0819:PsiDirectoryNode" />
+              <item name="region" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SafetyPlatform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SafetyPlatform" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="module_executelaw" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SafetyPlatform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SafetyPlatform" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="module_login" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SafetyPlatform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SafetyPlatform" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="module_regionchart" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SafetyPlatform" type="b2602c69:ProjectViewProjectNode" />
@@ -443,6 +720,14 @@
               <item name="view" type="462c0819:PsiDirectoryNode" />
               <item name="module_risklist" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="SafetyPlatform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SafetyPlatform" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="ext" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -450,7 +735,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="Img&#9;null&#9;null&#10;store&#9;FILE&#9;file://D:/MavenProject/SafetyPlatform/src/main/webapp/app/view/module_test/TestStore.js" />
+    <property name="SearchEverywhereHistoryKey" value="box&#9;null&#9;null&#10;Img&#9;null&#9;null&#10;store&#9;FILE&#9;file://D:/MavenProject/SafetyPlatform/src/main/webapp/app/view/module_test/TestStore.js" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
@@ -464,23 +749,23 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\MavenProject\SafetyPlatform\src\main\webapp\app\view\module_regionchart" />
+      <recent name="D:\MavenProject\SafetyPlatform\src\main\resources\mapper" />
+      <recent name="D:\MavenProject\SafetyPlatform\src\main\webapp\app\view\module\enterinfo" />
+      <recent name="D:\MavenProject\SafetyPlatform\src\main\resources" />
+      <recent name="D:\MavenProject\SafetyPlatform\src\main\webapp\app\store\executelaw" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.safetyplatform.service" />
+      <recent name="com.safetyplatform.dao" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\MavenProject\SafetyPlatform\src\main\webapp\app\view\module\enterinfo" />
       <recent name="D:\MavenProject\SafetyPlatform\src\main\webapp" />
       <recent name="D:\MavenProject\SafetyPlatform\src\main\webapp\app\view\module_risklist" />
       <recent name="D:\MavenProject\SafetyPlatform\src\main\webapp\app\store\riskcomlist" />
       <recent name="D:\MavenProject\SafetyPlatform\src\main\webapp\app\model\RiskComList" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.safetyplatform.service" />
-      <recent name="com.safetyplatform.dao" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\MavenProject\SafetyPlatform\src\main\resources" />
-      <recent name="D:\MavenProject\SafetyPlatform\src\main\resources\mapper" />
-      <recent name="D:\MavenProject\SafetyPlatform\src\main\webapp\app\store\executelaw" />
-      <recent name="D:\MavenProject\SafetyPlatform\src\main\webapp\app\view\module_executelaw" />
-      <recent name="D:\MavenProject\SafetyPlatform\src\main\webapp\app\view\module\enterinfo" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -495,7 +780,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Maven.mybatisgenerator">
+  <component name="RunManager" selected="Tomcat Server.Unnamed">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -721,7 +1006,15 @@
       <workItem from="1556874463133" duration="6952000" />
       <workItem from="1556890867910" duration="2914000" />
       <workItem from="1556933621835" duration="32771000" />
-      <workItem from="1557020747186" duration="26712000" />
+      <workItem from="1557020747186" duration="27848000" />
+      <workItem from="1557106862414" duration="26407000" />
+      <workItem from="1557193107691" duration="29396000" />
+      <workItem from="1557240309841" duration="865000" />
+      <workItem from="1557284231364" duration="30293000" />
+      <workItem from="1557362862803" duration="15569000" />
+      <workItem from="1557381834151" duration="5709000" />
+      <workItem from="1557541317767" duration="2770000" />
+      <workItem from="1557574820395" duration="639000" />
     </task>
     <task id="LOCAL-00001" summary="finish region tree,but not finish click event">
       <created>1554283249411</created>
@@ -744,11 +1037,18 @@
       <option name="project" value="LOCAL" />
       <updated>1556620494623</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="还剩第三个账号，第二个账号风险总览，辖区内风险值">
+      <created>1557058793746</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1557058793746</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="776319000" />
+    <option name="totallyTimeSpent" value="889103000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -760,7 +1060,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -776,27 +1076,27 @@
       <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.497979" weight="0.45212767" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32978722" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.18439716" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" sideWeight="0.4995958" weight="0.3280142" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.4995958" weight="0.20567375" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.497979" weight="0.46631205" />
+      <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.4995958" weight="0.59574467" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.497979" weight="0.54964536" />
       <window_info anchor="bottom" id="Spring" order="8" weight="0.32978722" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4995958" weight="0.67375886" />
-      <window_info anchor="bottom" id="Database Console" order="16" weight="0.35106382" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.498708" visible="true" weight="0.3678254" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.498708" visible="true" weight="0.295764" />
       <window_info id="Web" order="6" sideWeight="0.501292" side_tool="true" weight="0.32659662" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.11879433" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Database Console" order="16" weight="0.31382978" />
       <window_info anchor="bottom" id="SQL Generator" order="0" weight="0.4326241" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.5212766" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.2287234" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -835,14 +1135,15 @@
     <MESSAGE value="finish region tree,but not finish click event" />
     <MESSAGE value="完成隐患排查整改的基本功能（上传照片预览）；&#10;要写入排查人和整改人信息，下面的工作内容是完成登录模块（cookie）" />
     <MESSAGE value="准备第二个账号" />
-    <option name="LAST_COMMIT_MESSAGE" value="准备第二个账号" />
+    <MESSAGE value="还剩第三个账号，第二个账号风险总览，辖区内风险值" />
+    <option name="LAST_COMMIT_MESSAGE" value="还剩第三个账号，第二个账号风险总览，辖区内风险值" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="16" />
+      <option name="time" value="17" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
@@ -855,288 +1156,48 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/service/ExecuteLawService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/SafetyPlatform/images/19/平面图像.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/SafetyPlatform/images/19/0/捕获4.JPG">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/SafetyPlatform/images/19/0/12.JPG">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/view/module/region/HiddenCheckGrid.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="51" column="36" lean-forward="true" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
-          <folding>
-            <element signature="e#3633#9336#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/web/UploadController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="143" selection-start-line="143" selection-end-line="143" />
-          <folding>
-            <element signature="e#1374#1478#0" />
-            <element signature="method#upload#0;class#UploadController#0" />
-            <element signature="method#download#0;class#UploadController#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/service/ExecuteLawGovFielService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/service/impl/ExecuteLawServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="35" column="43" lean-forward="true" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/service/impl/ExecuteLawGovFielServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ExecuteLawGovFileDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/view/module_executelaw/ExecuteLawTree.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3043">
-          <caret line="361" column="21" selection-start-line="361" selection-start-column="21" selection-end-line="361" selection-end-column="21" />
-          <folding>
-            <element signature="n#!!block;n#initUpload#0" />
-            <element signature="n#!!block;n#showFile#0" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d6d18660-479c-4384-8ed9-01d458cdac3f/console.sql">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/build/development/SafetyPlatform/resources/SafetyPlatform-all.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/HiddenRiskCheckCorrectDao.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/build/development/SafetyPlatform/app.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-510" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/RegionTreeDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="46" column="46" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="46" />
+        <state>
+          <caret column="23" selection-start-column="23" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/entity/LoginInfo.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="108">
+          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="64" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/entity/RegionTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/dao/ExecuteLawDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/service/impl/MainServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/entity/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/service/MainService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/entity/RiskEnterGrade.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/view/module_regionchart/eChartPanel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/service/OverviewTreeService/OverviewTreeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="51" column="31" lean-forward="true" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/service/RegionTreeService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        <state relative-caret-position="392">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/dao/ExecuteLawGovFileDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/dao/HiddenRiskCheckCorrectDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/dao/ManagerDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/risk_index/RiskIndex.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="110" selection-start-line="7" selection-start-column="110" selection-end-line="7" selection-end-column="110" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/web/ExecuteLawGovFileController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-396">
-          <caret line="22" column="21" lean-forward="true" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/web/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="41" column="46" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/service/RiskEnterListService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/entity/EchartsData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/dao/RiskEnterGradeDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="24" column="42" lean-forward="true" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/RiskEnterGradeDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="11" column="40" lean-forward="true" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/service/impl/RiskEnterListServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="43" column="22" lean-forward="true" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/entity/risk_index/RiskIndexA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-292">
-          <caret column="41" selection-start-column="41" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/view/module/enterinfo/EnterProperty.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3383">
-          <caret line="199" column="48" lean-forward="true" selection-start-line="199" selection-start-column="48" selection-end-line="199" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ExecuteLawDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="35" column="33" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/service/impl/EnterInfoServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/EnterInfoDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="73" column="13" lean-forward="true" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/service/impl/RegionTreeServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="72" column="25" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
+          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -1147,87 +1208,306 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/entity/enter_info/EnterBusiness.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/entity/enter_info/EnterpriseBaseInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/entity/enter_info/ZoneBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-config.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ManagerDao.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/dao/RegionTreeDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2822">
-          <caret line="166" column="21" selection-start-line="166" selection-start-column="21" selection-end-line="166" selection-end-column="21" />
+        <state relative-caret-position="294">
+          <caret line="29" column="71" lean-forward="true" selection-start-line="29" selection-start-column="71" selection-end-line="29" selection-end-column="71" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/logback.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/dao/HRLevelNumDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="153">
+          <caret line="13" column="60" selection-start-line="13" selection-start-column="60" selection-end-line="13" selection-end-column="90" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/dao/RiskEnterGradeDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/HRLevelNumDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/service/impl/RegionRiskChartServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="28" column="2" lean-forward="true" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/service/RegionRiskChartService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/service/RiskEnterListService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-dao.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ExecuteLawGovFileDao.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
-          <folding>
-            <element signature="e#871#879#0" expanded="true" />
-            <element signature="e#919#932#0" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-298" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/mybatis-generator/${target_package}/dao/FatalDangerSourceMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ExecuteLawDao.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/generatorConfig.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="53" selection-start-line="36" selection-start-column="53" selection-end-line="36" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/entity/enter_info/EnterpriseOtherInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="45" column="20" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
-        </state>
+        <state relative-caret-position="-1043" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/app/view/module_risklist/GridRiskComList.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="135" column="10" lean-forward="true" selection-start-line="129" selection-start-column="8" selection-end-line="135" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/EnterOtherInfoDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/dao/ExecuteLawDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/web/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/web/ExecuteLawGovFileController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/web/ExecuteLawController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-68">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/web/EnterInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-944">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/web/EnterFatalSafeInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2661">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/service/impl/EnterInfoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51">
+          <caret line="25" column="72" lean-forward="true" selection-start-line="25" selection-start-column="72" selection-end-line="25" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/web/UploadController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="68" column="13" lean-forward="true" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/service/impl/RegionTreeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="85" column="30" selection-start-line="85" selection-start-column="30" selection-end-line="85" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://d6d18660-479c-4384-8ed9-01d458cdac3f/schema/risk_manage/table/enter_hidden_relation">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/Application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="81" column="26" selection-start-line="81" selection-start-column="26" selection-end-line="81" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/RiskEnterGradeDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" column="23" lean-forward="true" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/view/module_executelaw/ExecuteLawTree.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4509">
+          <caret line="445" column="7" selection-start-line="445" selection-start-column="7" selection-end-line="445" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/view/main/Main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-187">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/view/main/region/TopController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-301" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/view/main/MainController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1734" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/view/module_login/Login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="37" column="30" lean-forward="true" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/controller/login/LoginController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/view/main/region/Top.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="24" column="56" lean-forward="true" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/service/MainService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/service/impl/RiskEnterListServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/view/module_regionchart/RegionChartTree.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="952">
+          <caret line="56" column="37" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/service/impl/MainServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/dao/HiddenRiskCheckCorrectDao.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/view/module/region/HiddenCheckCorrectGrid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2210">
+          <caret line="130" column="79" selection-start-line="130" selection-start-column="79" selection-end-line="130" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/store/hiddencheckcorrect/HiddenCheckCorrectGridStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/HiddenRiskCheckCorrectDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/entity/HiddenRiskCheckCorrect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2974#2975#0" expanded="true" />
+            <element signature="e#3006#3007#0" expanded="true" />
+            <element signature="e#3054#3055#0" expanded="true" />
+            <element signature="e#3096#3097#0" expanded="true" />
+            <element signature="e#3132#3133#0" expanded="true" />
+            <element signature="e#3166#3167#0" expanded="true" />
+            <element signature="e#3218#3219#0" expanded="true" />
+            <element signature="e#3264#3265#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/view/module/region/HiddenCheckGrid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3876">
+          <caret line="228" column="17" selection-start-line="228" selection-start-column="17" selection-end-line="228" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/web/RiskChartController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/safetyplatform/web/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="112" column="50" selection-start-line="112" selection-start-column="50" selection-end-line="112" selection-end-column="50" />
         </state>
       </provider>
     </entry>

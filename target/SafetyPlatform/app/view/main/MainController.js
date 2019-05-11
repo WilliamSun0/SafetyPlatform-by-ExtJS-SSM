@@ -60,9 +60,18 @@ Ext.define('SafetyPlatform.view.main.MainController', {
 	
 	// 选择了主菜单上的菜单后执行
     onRegionChartClick : function() {
+        var maincenter = this.getView().down('panel');
 
-        //this.getView().down('regionmenutree').reload();
-        //Ext.ComponentQuery.query('regionmenutree').load();
+        maincenter.removeAll();
+
+        console.log('onEnterInfoManageClick');
+
+        maincenter.add({
+            xtype : 'modulepanel',
+            closable : false,
+            reorderable : true,
+            mytype:3
+        });
 
 	},
 

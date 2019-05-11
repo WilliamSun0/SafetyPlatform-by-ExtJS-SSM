@@ -14,11 +14,11 @@
     <script src="app/view/module/enterinfo/scrthrt.js"></script>
     <script src="app/view/module/enterinfo/enterprise_graph.js"></script>
 
-    <%--<script src="app/view/module_executelaw/mult_upload.js"></script>--%>
-    <%--<script src="app/view/module_executelaw/showFile.js"></script>--%>
-    <%--<script src="app/view/module_executelaw/super_zfbm.js"></script>--%>
-    <%--<script src="app/view/module_executelaw/super_zfwj.js"></script>--%>
-    <%--<script src="app/view/module_executelaw/ExecuteLaw.js"></script>--%>
+    <script src="app/view/module/enterinfo/DangerChemical.js"></script>
+    <script src="app/view/module/enterinfo/FatalDangerSource.js"></script>
+
+    <script type="text/javascript" src="echarts.js"></script>
+
     
     <!-- 引入Font Awesome的css文件 -->
 <link type="text/css" rel="stylesheet" href="css/font-awesome.css">

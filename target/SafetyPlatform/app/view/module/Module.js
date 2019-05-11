@@ -13,6 +13,7 @@ Ext.define('SafetyPlatform.view.module.Module', {
     uses: ['SafetyPlatform.view.module.region.RegionMenuTree',
         'SafetyPlatform.view.module.enterinfo.EnterInfoTree',
         'SafetyPlatform.view.module_executelaw.ExecuteLawTree',
+        'SafetyPlatform.view.module_regionchart.RegionChartTree',
         'SafetyPlatform.view.main.region.Center'],
 
     controller: 'module',
@@ -33,6 +34,9 @@ Ext.define('SafetyPlatform.view.module.Module', {
 
         } else if (this.mytype == 2) {
             mytype = 'executelawtree';
+            myid = 'panel';
+        }else if (this.mytype == 3) {
+            mytype = 'rctree';
             myid = 'panel';
         }
 

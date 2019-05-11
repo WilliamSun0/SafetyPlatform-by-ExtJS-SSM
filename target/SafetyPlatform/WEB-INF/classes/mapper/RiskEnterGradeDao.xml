@@ -13,13 +13,15 @@
     </select>
 
     <select id="queryAllEnterRisk" resultType="RiskEnterGrade">
-select enter_name, fatal_danger_source,high_risk_enterprise,
+select ebi.enter_id,enter_name, fatal_danger_source,high_risk_enterprise,
    danger_chemical_tech,
    restricted_space,
    dust_explosion,
    type_name as enter_industry,
    adi.text as enter_community,
-   count(ehr.risk_id) as risk_num
+   count(ehr.risk_id) as risk_num,
+   ebi.dust_explosion,
+   ebi.restricted_space
 
    from enterprise_base_info ebi,enter_business_relation ebr,business_type_info bti,admin_division_info adi,enter_hidden_relation ehr
    where ebi.enter_id = ebr.enter_id and ebr.type_id = bti.type_id and adi.region_url = ebi.gov_id and ebi.enter_id = ehr.enter_id;
@@ -32,29 +34,35 @@ select enter_name, fatal_danger_source,high_risk_enterprise,
         where enter_id = #{enterId};
     </select>
 
-
-
-    <select id="queryEnterHiddenRiskNum" resultType="java.lang.Integer">
-        SELECT count(*)
-        FROM enter_hidden_relation ehr ,zyjk
-        where ehr.risk_id = zyjk.risk_id and ehr.enter_id = #{enterId}
-        group by danger_level_num order by danger_level_num asc;
+    <select id="queryAllEnterId" resultType="java.lang.Long">
+        SELECT enter_id
+        FROM enterprise_base_info;
     </select>
 
-    <select id="queryEHRNoCorrectNum" resultType="java.lang.Integer">
-        SELECT count(*)
-        FROM enter_hidden_relation ehr ,zyjk
-        where ehr.risk_id = zyjk.risk_id and ehr.enter_id = #{enterId} and ehr.status = 1;
-        group by danger_level_num order by danger_level_num asc;
-    </select>
 
-    <select id="queryEnterAccidentList" resultType="java.lang.Integer">
+    <select id="queryEnterMaxAccident" resultType="int">
         SELECT max(acc_type)
         FROM enter_acc_info
         where enter_id = #{enterId}
     </select>
 
+    <select id="queryEnterRiskNumById" resultType="int">
+        SELECT count(1)
+        FROM enter_hidden_relation
+        where enter_id = #{enterId}
+    </select>
 
 
+    <select id="queryEnterFatalRiskNumById" resultType="int">
+        SELECT count(1)
+        FROM enter_hidden_relation
+        where enter_id = #{enterId}
+    </select>
+
+    <resultMap id="getEnterHRNumResult"   type="HashMap">
+        <result property="key" column="danger_level_num" />
+        <result property="value" column="mynum" />
+
+    </resultMap>
 
 </mapper>

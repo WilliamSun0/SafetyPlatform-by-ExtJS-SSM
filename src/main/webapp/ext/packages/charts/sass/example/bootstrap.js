@@ -1682,7 +1682,6 @@ Ext.globalEval = Ext.globalEval || (this.execScript
     ? function (code) { execScript(code); }
     : function ($$code) { eval.call(window, $$code); });
 
-//<feature legacyBrowser>
 /*
  * Only IE8 & IE/Quirks lack Function.prototype.bind so we polyfill that here.
  */
@@ -1713,7 +1712,6 @@ if (!Function.prototype.bind) {
         bind.$extjs = true; // to detect this polyfill if one want to improve it
     }());
 }
-//</feature>
 
 //</editor-fold>
 

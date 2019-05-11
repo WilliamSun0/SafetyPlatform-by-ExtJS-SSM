@@ -1,17 +1,10 @@
 package com.safetyplatform.service.impl;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.safetyplatform.dao.HiddenRiskCheckCorrectDao;
-import com.safetyplatform.dao.RiskEnterGradeDao;
-import com.safetyplatform.entity.RiskEnterGrade;
-import com.safetyplatform.entity.Test;
 import com.safetyplatform.service.MainService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 public class MainServiceImpl implements MainService {
@@ -31,7 +24,7 @@ public class MainServiceImpl implements MainService {
 //        return jsonObject;
 //    }
 
-    public JSONObject getHiddenRiskCheckCorrect(String enterId,int start,int limit,String businessType){
+    public JSONObject getHiddenRiskCheckCorrect(int status,String enterId,int start,int limit,String businessType){
         JSONObject jsonObject = new JSONObject();
 
 
@@ -52,9 +45,9 @@ public class MainServiceImpl implements MainService {
                 businessType = "消防";
             }
         }
-        jsonObject.put("totalProperty",hiddenRiskCheckCorrectDao.getTotalNumHRCCL(enterId,businessType));
+        jsonObject.put("totalProperty",hiddenRiskCheckCorrectDao.getTotalNumHRCCL(status,enterId,businessType));
 
-        jsonObject.put("data",hiddenRiskCheckCorrectDao.getHiddenRiskCheckCorrectList(enterId,start,limit,businessType));
+        jsonObject.put("data",hiddenRiskCheckCorrectDao.getHiddenRiskCheckCorrectList(status,enterId,start,limit,businessType));
 
         return jsonObject;
     }

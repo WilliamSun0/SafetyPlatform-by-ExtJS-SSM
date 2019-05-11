@@ -1,6 +1,7 @@
 package com.safetyplatform.web;
 
 import com.alibaba.fastjson.JSONObject;
+import com.safetyplatform.dao.EnterOtherInfoDao;
 import com.safetyplatform.dao.ManagerDao;
 import com.safetyplatform.entity.enter_info.EnterBusiness;
 import com.safetyplatform.entity.enter_info.EnterpriseOtherInfo;
@@ -26,6 +27,10 @@ public class EnterInfoController {
 
     @Autowired
     private ManagerDao managerDao;
+    @Autowired
+
+    private EnterOtherInfoDao enterOtherInfoDao;
+
 
     @RequestMapping(value="/enterInfo/getEnterpriseByEid",
             method=RequestMethod.GET
@@ -80,13 +85,7 @@ public class EnterInfoController {
         return managerDao.getEnterBusinessList();/*获取风险评级企业列表*/
     }
 
-    @RequestMapping(value="/Enterprise/svTrbl",
-            method=RequestMethod.POST
-    )
-    @ResponseBody
-    public List<EnterBusiness> saveAccident(){
 
-        //这里直接用了dao了，加service一样的
-        return managerDao.getEnterBusinessList();/*获取风险评级企业列表*/
-    }
+
+
 }

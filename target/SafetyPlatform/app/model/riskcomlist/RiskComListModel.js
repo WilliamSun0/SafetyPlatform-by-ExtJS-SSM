@@ -1,6 +1,7 @@
 Ext.define("SafetyPlatform.model.riskcomlist.RiskComListModel", {
   extend: "Ext.data.Model",
   fields: [
+      { name: 'enterId'},
       { name: 'enterName'},
       { name: 'enterIndustry' },
       { name: 'enterCommunity'},
@@ -14,7 +15,7 @@ Ext.define("SafetyPlatform.model.riskcomlist.RiskComListModel", {
       { name: 'restrictedSpace' },
       { name: 'enterCommunity'},
       { name: 'dustExplosion'},
-      { name: 'evaluationName'},
+      //{ name: 'evaluationNum'},
       { name: 'lastEvaluationTime'},
   ]
 });

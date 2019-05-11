@@ -27,6 +27,8 @@ public interface RegionTreeDao {
 
     List<RegionTree> getChildren(@Param("noteId") String noteId);
 
+    List<RegionTree> getRegionById(@Param("regionId") String regionId);
+
 
     List<EnterBusiness> getEnterBusinessByEnterId(@Param("noteId") long noteId);
 

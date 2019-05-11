@@ -10,6 +10,7 @@ Ext.define('SafetyPlatform.store.hiddencheckcorrect.HiddenCheckCorrectGridStore'
     //sorters: [{ property: 'OrderNumber', direction: 'ASC' }],
 
     fields: [
+        { name: 'uid'},
         { name: 'checkMan'},
         { name: 'correctMan' },
         { name: 'partObject'},
@@ -18,8 +19,10 @@ Ext.define('SafetyPlatform.store.hiddencheckcorrect.HiddenCheckCorrectGridStore'
         { name: 'checkVoucher'},
         { name: 'correctVoucher'},
         { name: 'dangerLevel' },
-
-
+        { name: 'status' },
+        { name: 'checkTime' },
+        { name: 'correctTime' },
+        { name: 'riskId' },
     ],
 
     //     private String checkMan;//节点id
@@ -49,7 +52,7 @@ Ext.define('SafetyPlatform.store.hiddencheckcorrect.HiddenCheckCorrectGridStore'
 
     proxy : {
         type: 'ajax',
-        url: '/SafetyPlatform/HiddenRiskCheckCorrect',
+        url: '/SafetyPlatform/HiddenRiskCheckCorrect2',
 
         reader: { type:'json',rootProperty: 'data',
             totalProperty : 'totalProperty'
@@ -100,7 +103,7 @@ Ext.define('SafetyPlatform.store.hiddencheckcorrect.HiddenCheckCorrectGridStore'
 
 
 
-    autoLoad:true,
+    //autoLoad:true,
 
 });
 

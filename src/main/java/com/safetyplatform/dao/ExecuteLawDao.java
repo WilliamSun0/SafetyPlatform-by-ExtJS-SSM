@@ -17,6 +17,4 @@ public interface ExecuteLawDao {
      List<ExecuteLaw> getEnterExecuteLaw(@Param("enterId") long enterId);
 
 
-
-
 }

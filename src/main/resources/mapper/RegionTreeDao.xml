@@ -34,6 +34,12 @@
         WHERE father_id is NULL
     </select>
 
+    <select id="getRegionById" resultMap="RegionTreeTemp">
+        SELECT *
+        FROM admin_division_info
+        WHERE id = #{regionId};
+    </select>
+
     <select id="getEnterListByZoneId" resultType="EnterBaseInfo">
 
         SELECT enter_id,enter_name

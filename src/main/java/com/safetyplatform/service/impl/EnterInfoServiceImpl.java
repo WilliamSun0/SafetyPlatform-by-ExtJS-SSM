@@ -1,6 +1,6 @@
 package com.safetyplatform.service.impl;
 
-import com.safetyplatform.dao.EnterInfoDao;
+import com.safetyplatform.dao.EnterOtherInfoDao;
 import com.safetyplatform.entity.enter_info.EnterpriseBaseInfo;
 import com.safetyplatform.entity.enter_info.EnterpriseOtherInfo;
 import com.safetyplatform.entity.enter_info.ZoneBase;
@@ -17,10 +17,10 @@ public class EnterInfoServiceImpl implements EnterInfoService {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
     @Autowired
-    private EnterInfoDao enterInfoDao;
+    private EnterOtherInfoDao enterOtherInfoDao;
     public EnterpriseOtherInfo getEnterInfo(long enterId){
 
-        return enterInfoDao.getEnterInfo(enterId);
+        return enterOtherInfoDao.getEnterInfo(enterId);
     }
 
     public long insertNewEnterInfo(EnterpriseOtherInfo enterpriseOtherInfo){
@@ -37,33 +37,28 @@ public class EnterInfoServiceImpl implements EnterInfoService {
         enterpriseBaseInfo.setEnterId(enterId);
         //新增企业
         if(enterId==0){
-            enterInfoDao.insertEnterBaseInfo(enterpriseBaseInfo);
+            enterOtherInfoDao.insertEnterBaseInfo(enterpriseBaseInfo);
             //插入新的企业时返回自增id
             enterId = enterpriseBaseInfo.getEnterId();
             logger.info(String.valueOf(enterId));
             enterpriseOtherInfo.setEnterId(enterId);
-            enterInfoDao.insertEnterOtherInfo(enterpriseOtherInfo);
+            enterOtherInfoDao.insertEnterOtherInfo(enterpriseOtherInfo);
 
-            enterInfoDao.insertEnterIndustry(enterId,enterpriseOtherInfo.getTypeId());
+            enterOtherInfoDao.insertEnterIndustry(enterId,enterpriseOtherInfo.getTypeId());
 
             logger.info("mynew");
         }else{
             logger.info("myupdate");
-            enterInfoDao.updateEnterBaseInfo(enterpriseBaseInfo);
-            enterInfoDao.updateEnterOtherInfo(enterpriseOtherInfo);
-            enterInfoDao.updateEnterIndustry(enterId,enterpriseOtherInfo.getTypeId());
+            enterOtherInfoDao.updateEnterBaseInfo(enterpriseBaseInfo);
+            enterOtherInfoDao.updateEnterOtherInfo(enterpriseOtherInfo);
+            enterOtherInfoDao.updateEnterIndustry(enterId,enterpriseOtherInfo.getTypeId(),enterpriseOtherInfo.getEbrId());
         }
 
         return enterId;
     }
 
     public List<ZoneBase> getZoneListByTownId(String townId){
-        return enterInfoDao.getZoneListByTownId(townId);
+        return enterOtherInfoDao.getZoneListByTownId(townId);
     }
 
-//    public int updateEnterImg(String enterId,String type){
-//        EnterpriseOtherInfo enterpriseOtherInfo = new EnterpriseOtherInfo();
-//        if (type.equals("plane"))
-//        enterpriseOtherInfo.setPlaneImg();
-//    }
 }

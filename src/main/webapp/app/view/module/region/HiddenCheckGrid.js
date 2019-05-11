@@ -223,8 +223,102 @@ Ext.define('SafetyPlatform.view.module.region.HiddenCheckGrid', {
     }],
 
     initComponent:function(){
-
+        var flag = true;
+        var checkMan =Ext.util.Cookies.get("userName");
         var me = this;
+        function saveHRCK(riskId,checkMan)
+        {
+            var type='';
+            $.ajax({
+                url : ctxpath+'/hrcc/svHRCC2',
+                data:{enterId:me.enterId,riskId:riskId,checkMan:checkMan},
+                dataType : 'json',
+                async:false,
+                type:'POST',
+                success:function(data){
+                    me.store.load({params:{enterId:enterId}});
+
+                },
+                error:function(data){
+
+                }
+            });
+        }
+
+        var sm=Ext.create('Ext.selection.CheckboxModel',
+            {
+                injectCheckbox:0,//checkbox位于哪一列，默认值为0
+                //mode:'single',//multi,simple,single；默认为多选multi
+                checkOnly:true,//如果值为true，则只用点击checkbox列才能选中此条记录
+                allowDeselect:true,//如果值true，并且mode值为单选（single）时，可以通过点击checkbox取消对其的选择
+                enableKeyNav:false,
+                onHeaderClick: function (headerCt,header,e)
+                {
+                    return ;//禁用全选
+                },
+                listeners:
+                    {
+
+                        select: function(model,record,index)
+                        {//record被选中时产生的事件
+
+                            var riskId = record.get('riskId');
+                           //选中的节目名称
+                            checked=1;
+                            alert("你确定存在该隐患？" + record.partObject);
+
+                            saveHRCK(riskId,checkMan);
+                        }
+                    }
+            });
+
+        this.selModel=sm;
+        var store1 =new Ext.data.Store({
+
+            fields: [
+                { name: 'checkMan'},
+                { name: 'correctMan' },
+                { name: 'partObject'},
+                { name: 'mainType'},
+                { name: 'riskDescription'},
+                { name: 'checkVoucher'},
+                { name: 'correctVoucher'},
+                { name: 'dangerLevel' },
+                { name: 'uid' },
+                {name:'checkImg'}
+            ],
+
+            proxy : {
+                type: 'ajax',
+                url: '/SafetyPlatform/HiddenRiskCheckCorrect',
+
+                reader: { type:'json',rootProperty: 'data',
+                    totalProperty : 'totalProperty'
+                },
+
+                extraParams:{enterId:this.enterId,
+                    businessType:this.object_type
+                }
+            },
+            //autoLoad:true
+
+        });
+
+        this.store = store1;
+        this.store.load();
+        if (!flag) {
+            me.store.addListener('load', function (st, rds, opts) {
+                var selMod = me.getSelectionModel();
+                if (rds == null)
+                    return;
+                //勾选参加了检查的单位
+                for (var i = 0; i < rds.length; i++) {
+                    if (rds[i].data.uid != 0)
+                        selMod.select(i, true, false);
+                }
+            });
+            flag = false;
+        }
         this.columns = [
             {xtype: 'rownumberer', text: '序号', width:40},
 
@@ -284,6 +378,9 @@ Ext.define('SafetyPlatform.view.module.region.HiddenCheckGrid', {
                             loaded=false;
                             var rec = grid.getStore().getAt(rowIndex);
                             var uid=rec.get('uid');
+                            if (uid == null){
+                                alert("请先勾选此隐患项已确认存在该隐患");
+                            }
                             var riskId = rec.get('riskId');
                             var enterId = me.enterId;
                             if (Ext.isEmpty(uid)) {
@@ -322,38 +419,7 @@ Ext.define('SafetyPlatform.view.module.region.HiddenCheckGrid', {
         ];
 
 
-        var store1 =new Ext.data.Store({
 
-            fields: [
-                { name: 'checkMan'},
-                { name: 'correctMan' },
-                { name: 'partObject'},
-                { name: 'mainType'},
-                { name: 'riskDescription'},
-                { name: 'checkVoucher'},
-                { name: 'correctVoucher'},
-                { name: 'dangerLevel' },
-                { name: 'uid' },
-                {name:'checkImg'}
-            ],
-
-            proxy : {
-                type: 'ajax',
-                url: '/SafetyPlatform/HiddenRiskCheckCorrect',
-
-                reader: { type:'json',rootProperty: 'data',
-                    totalProperty : 'totalProperty'
-                },
-
-                extraParams:{enterId:this.enterId,
-                    businessType:this.object_type
-                }
-            },
-            autoLoad:true
-
-        });
-
-        this.store = store1;
 
         this.callParent(arguments);
 
