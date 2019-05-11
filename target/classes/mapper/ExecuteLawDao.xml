@@ -1,0 +1,78 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.safetyplatform.dao.ExecuteLawDao">
+    <!--目的:为dao接口方法提供sql语句配置
+    即针对dao接口中的方法编写我们的sql语句-->
+
+
+    <select id="getEnterExecuteLaw" resultMap="ExecuteLawMap">
+
+        select * from execute_law where enter_id = #{enterId};
+    </select>
+
+    <resultMap id="ExecuteLawMap" type="ExecuteLaw">
+        <result column="exe_result" property="exeResult" jdbcType="TINYINT" javaType="Boolean" />
+
+    </resultMap>
+
+
+
+    <insert id="insertExeLawList" parameterType="java.util.List">
+
+
+            insert into execute_law
+            (exe_time,exe_remark,exe_type,exe_result,enter_id)
+            values
+            <foreach collection ="list" item="item" index= "index" separator =",">
+                (
+                #{item.exeTime,jdbcType=DATE},
+                #{item.exeRemark},
+                #{item.exeType},
+                #{item.exeResult,jdbcType=TINYINT},
+                #{item.enterId}
+                )
+            </foreach>
+
+    </insert>
+
+    <update id="updateExeLawList" parameterType="java.util.List">
+        update execute_law
+        <trim prefix="set" suffixOverrides=",">
+            <trim prefix="exe_time =case" suffix="end,">
+                <foreach collection="list" item="item" index="index">
+                    <if test="item.exeTime !=null">
+                        when exe_id=#{item.exeId} then #{item.exeTime}
+                    </if>
+                </foreach>
+            </trim>
+            <trim prefix="exe_remark =case" suffix="end,">
+                <foreach collection="list" item="item" index="index">
+                    <if test="item.exeRemark !=null">
+                        when exe_id=#{item.exeId} then #{item.exeRemark}
+                    </if>
+                </foreach>
+            </trim>
+            <trim prefix="exe_result =case" suffix="end,">
+                <foreach collection="list" item="item" index="index">
+                    <if test="item.exeResult !=null">
+                        when exe_id=#{item.exeId} then #{item.exeResult}
+                    </if>
+                </foreach>
+            </trim>
+            <trim prefix="exe_type =case" suffix="end,">
+                <foreach collection="list" item="item" index="index">
+                    <if test="item.exeType !=null">
+                        when exe_id=#{item.exeId} then #{item.exeType}
+                    </if>
+                </foreach>
+            </trim>
+
+        </trim>
+        where enter_id in
+        <foreach collection="list" index="index" item="item" separator=",">
+            #{item.enterId,jdbcType=INT}
+        </foreach>
+    </update>
+
+</mapper>

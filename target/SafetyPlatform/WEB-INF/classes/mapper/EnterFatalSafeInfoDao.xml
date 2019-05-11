@@ -1,0 +1,188 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.safetyplatform.dao.EnterFatalSafeInfoDao">
+    <!--目的:为dao接口方法提供sql语句配置
+    即针对dao接口中的方法编写我们的sql语句-->
+
+    <!--代表新建的行用id为0，这里可以在实体类再加一个标识符flag代表也可以，实体比实际表中的字段多不影响-->
+    <select id="getEnterAccList" resultType="EnterAccInfo">
+
+        select * from enter_acc_info where enter_id = #{enterId};
+    </select>
+
+
+    <insert id="insertEnterAccList" parameterType="java.util.List">
+
+
+        insert into enter_acc_info
+        (acc_type,acc_time,enter_id)
+        values
+        <foreach collection ="list" item="item" index= "index" separator =",">
+            (
+            #{item.accType},
+            #{item.accTime,jdbcType=DATE},
+            #{item.enterId}
+            )
+        </foreach>
+
+    </insert>
+
+    <update id="updateEnterAccList" parameterType="java.util.List">
+        update enter_acc_info
+        <trim prefix="set" suffixOverrides=",">
+            <trim prefix="acc_type =case" suffix="end,">
+                <foreach collection="list" item="item" index="index">
+                    <if test="item.accType !=null">
+                        when acc_id=#{item.accId} then #{item.accType}
+                    </if>
+                </foreach>
+            </trim>
+            <trim prefix="acc_time =case" suffix="end,">
+                <foreach collection="list" item="item" index="index">
+                    <if test="item.accTime !=null">
+                        when acc_id=#{item.accId} then #{item.accTime}
+                    </if>
+                </foreach>
+            </trim>
+            <trim prefix="enter_id =case" suffix="end,">
+                <foreach collection="list" item="item" index="index">
+                    <if test="item.enterId !=null">
+                        when acc_id=#{item.accId} then #{item.enterId}
+                    </if>
+                </foreach>
+            </trim>
+
+        </trim>
+        where
+        <foreach collection="list" index="index" item="item" separator=",">
+            acc_id = #{item.accId}
+        </foreach>
+    </update>
+
+    <delete id="deleteEnterAcc" >
+        DELETE FROM enter_acc_info WHERE acc_id = #{accId}
+    </delete>
+
+
+    <select id="getEnterFDSList" resultType="FatalDangerSource">
+
+        select * from fatal_danger_source where enter_id = #{enterId};
+    </select>
+
+
+    <insert id="insertEnterFDSList" parameterType="java.util.List">
+
+
+        insert into fatal_danger_source
+        (enter_id, src_name, stock_num, critical_num)
+        values
+        <foreach collection ="list" item="item" index= "index" separator =",">
+            (
+            #{item.enterId},
+            #{item.srcName},
+            #{item.stockNum},
+            #{item.criticalNum}
+            )
+        </foreach>
+
+    </insert>
+
+    <update id="updateEnterFDSList" parameterType="java.util.List">
+        update enter_acc_info
+        <trim prefix="set" suffixOverrides=",">
+            <trim prefix="src_name =case" suffix="end,">
+                <foreach collection="list" item="item" index="index">
+                    <if test="item.srcName !=null">
+                        when src_id=#{item.srcId} then #{item.srcName}
+                    </if>
+                </foreach>
+            </trim>
+            <trim prefix="stock_num =case" suffix="end,">
+                <foreach collection="list" item="item" index="index">
+                    <if test="item.stockNum !=null">
+                        when src_id=#{item.srcId} then #{item.stockNum}
+                    </if>
+                </foreach>
+            </trim>
+            <trim prefix="critical_num =case" suffix="end,">
+                <foreach collection="list" item="item" index="index">
+                    <if test="item.criticalNum !=null">
+                        when src_id=#{item.srcId} then #{item.criticalNum}
+                    </if>
+                </foreach>
+            </trim>
+
+
+        </trim>
+        where
+        <foreach collection="list" index="index" item="item" separator=",">
+            src_id = #{item.srcId}
+        </foreach>
+    </update>
+
+    <delete id="deleteEnterFDS" >
+        DELETE FROM fatal_danger_source WHERE src_id = #{srcId}
+    </delete>
+
+    <select id="getEnterDCTList" resultType="DangerChemicalTech">
+
+        select * from danger_chemical_tech where enter_id = #{enterId};
+    </select>
+
+
+    <insert id="insertEnterDCTList" parameterType="java.util.List">
+
+
+        insert into danger_chemical_tech
+        (enter_id, tech_name, involved_material, main_danger)
+        values
+        <foreach collection ="list" item="item" index= "index" separator =",">
+            (
+            #{item.enterId},
+            #{item.techName},
+            #{item.involvedMaterial},
+            #{item.mainDanger}
+            )
+        </foreach>
+
+    </insert>
+
+    <update id="updateEnterDCTList" parameterType="java.util.List">
+        update danger_chemical_tech
+        <trim prefix="set" suffixOverrides=",">
+            <trim prefix="tech_name =case" suffix="end,">
+                <foreach collection="list" item="item" index="index">
+                    <if test="item.techName !=null">
+                        when tech_id=#{item.techId} then #{item.techName}
+                    </if>
+                </foreach>
+            </trim>
+            <trim prefix="involved_material =case" suffix="end,">
+                <foreach collection="list" item="item" index="index">
+                    <if test="item.involvedMaterial !=null">
+                        when tech_id=#{item.techId} then #{item.involvedMaterial}
+                    </if>
+                </foreach>
+            </trim>
+            <trim prefix="main_danger =case" suffix="end,">
+                <foreach collection="list" item="item" index="index">
+                    <if test="item.mainDanger !=null">
+                        when tech_id=#{item.techId} then #{item.mainDanger}
+                    </if>
+                </foreach>
+            </trim>
+
+
+        </trim>
+        where
+        <foreach collection="list" index="index" item="item" separator=",">
+            tech_id = #{item.techId}
+        </foreach>
+    </update>
+
+    <delete id="deleteEnterDCT" >
+        DELETE FROM danger_chemical_tech WHERE tech_id = #{techId}
+    </delete>
+
+</mapper>
