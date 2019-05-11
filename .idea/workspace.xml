@@ -369,7 +369,7 @@
       <path value="$PROJECT_DIR$/src/main/webapp/ext/packages/ux/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-12" />
     <option name="y" value="-12" />
     <option name="width" value="1383" />
@@ -890,7 +890,7 @@
       <workItem from="1557362862803" duration="15569000" />
       <workItem from="1557381834151" duration="5709000" />
       <workItem from="1557541317767" duration="2770000" />
-      <workItem from="1557574820395" duration="1864000" />
+      <workItem from="1557574820395" duration="2175000" />
     </task>
     <task id="LOCAL-00001" summary="finish region tree,but not finish click event">
       <created>1554283249411</created>
@@ -931,7 +931,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="890328000" />
+    <option name="totallyTimeSpent" value="890639000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
